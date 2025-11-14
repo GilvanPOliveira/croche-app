@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "nome": "Brinco Circular",
+    "descricao": "Brinco de crochê em formato circular com base metálica.",
+    "categoria": "Acessórios",
+    "linhas": ["Linha fina", "Base metálica"],
+    "agulha": "1.5 mm",
+    "tipo": "Acessórios",
+    "tamanhos": {
+      "P": {
+        "medidas": { "diâmetro": 3.5 },
+        "preco": "R$ 22,00"
+      },
+      "M": {
+        "medidas": { "diâmetro": 4 },
+        "preco": "R$ 25,00"
+      },
+      "G": {
+        "medidas": { "diâmetro": 4.5 },
+        "preco": "R$ 28,00"
+      }
+    },
+    "observações": "Base metálica niquelada; leve e hipoalergênica.",
+    "imagem": "src/assets/image/pecas/acessorios/brinco1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Brinco Floral",
+    "descricao": "Brincos em crochê com design floral delicado e leveza natural.",
+    "categoria": "Acessórios",
+    "linhas": ["Linha Charme", "Base metálica"],
+    "agulha": "1.5 mm",
+    "tipo": "Acessórios",
+    "tamanhos": {
+      "P": {
+        "medidas": { "diâmetro": 4 },
+        "preco": "R$ 25,00"
+      },
+      "M": {
+        "medidas": { "diâmetro": 5 },
+        "preco": "R$ 28,00"
+      },
+      "G": {
+        "medidas": { "diâmetro": 6 },
+        "preco": "R$ 30,00"
+      }
+    },
+    "observações": "Peça delicada; guardar em local seco para preservar a forma.",
+    "imagem": "src/assets/image/pecas/acessorios/brincos2.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Brinco Pendente Colorido",
+    "descricao": "Brincos pendentes com fios de crochê coloridos e acabamento leve.",
+    "categoria": "Acessórios",
+    "linhas": ["Linha de algodão", "Ganchos hipoalergênicos"],
+    "agulha": "1.75 mm",
+    "tipo": "Acessórios",
+    "tamanhos": {
+      "P": {
+        "medidas": { "comprimento": 5 },
+        "preco": "R$ 25,00"
+      },
+      "M": {
+        "medidas": { "comprimento": 6 },
+        "preco": "R$ 28,00"
+      },
+      "G": {
+        "medidas": { "comprimento": 7 },
+        "preco": "R$ 30,00"
+      }
+    },
+    "observações": "Gancho antialérgico; ideal para uso diário.",
+    "imagem": "src/assets/image/pecas/acessorios/brincos3.jpg"
+  }
+]

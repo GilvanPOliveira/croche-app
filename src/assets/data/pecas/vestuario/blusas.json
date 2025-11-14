@@ -1,0 +1,277 @@
+[
+  {
+    "id": 1,
+    "nome": "Blusa Squares Coloridos",
+    "descricao": "Blusa artesanal com squares coloridos e toque leve.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha Anne"],
+    "agulha": "3.0 mm",
+    "tipo": "Blusas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 86, "cintura": 68, "quadril": 90, "comprimento": 52, "manga": 15 },
+        "preco": "R$ 115,00"
+      },
+      "M": {
+        "medidas": { "busto": 94, "cintura": 76, "quadril": 98, "comprimento": 54, "manga": 16 },
+        "preco": "R$ 120,00"
+      },
+      "G": {
+        "medidas": { "busto": 104, "cintura": 86, "quadril": 108, "comprimento": 56, "manga": 17 },
+        "preco": "R$ 130,00"
+      }
+    },
+    "observações": "Pode ser usada com regata ou sobreposição; leve e respirável.",
+    "imagem": "src/assets/image/pecas/vestuario/blusa1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Blusa Rendada Pastel",
+    "descricao": "Blusa rendada em tons pastéis, ideal para o verão.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha Charme"],
+    "agulha": "3.0 mm",
+    "tipo": "Blusas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 86, "cintura": 68, "quadril": 90, "comprimento": 52, "manga": 14 },
+        "preco": "R$ 110,00"
+      },
+      "M": {
+        "medidas": { "busto": 94, "cintura": 76, "quadril": 98, "comprimento": 54, "manga": 15 },
+        "preco": "R$ 115,00"
+      },
+      "G": {
+        "medidas": { "busto": 104, "cintura": 86, "quadril": 108, "comprimento": 56, "manga": 16 },
+        "preco": "R$ 125,00"
+      }
+    },
+    "observações": "Lavagem à mão recomendada para manter o formato rendado.",
+    "imagem": "src/assets/image/pecas/vestuario/blusa2.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Blusa Floral Curta",
+    "descricao": "Blusa em crochê floral com manga curta e caimento leve.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha 100% algodão"],
+    "agulha": "3.0 mm",
+    "tipo": "Blusas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 86, "cintura": 68, "quadril": 92, "comprimento": 50, "manga": 13 },
+        "preco": "R$ 120,00"
+      },
+      "M": {
+        "medidas": { "busto": 94, "cintura": 76, "quadril": 100, "comprimento": 52, "manga": 14 },
+        "preco": "R$ 130,00"
+      },
+      "G": {
+        "medidas": { "busto": 104, "cintura": 86, "quadril": 110, "comprimento": 54, "manga": 15 },
+        "preco": "R$ 140,00"
+      }
+    },
+    "observações": "Modelo versátil para uso casual ou praia.",
+    "imagem": "src/assets/image/pecas/vestuario/blusa3.jpg"
+  },
+  {
+    "id": 4,
+    "nome": "Blusa Square Degradê",
+    "descricao": "Blusa feita à mão com squares em degradê suave.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha mesclada"],
+    "agulha": "3.0 mm",
+    "tipo": "Blusas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 86, "cintura": 68, "quadril": 90, "comprimento": 52, "manga": 14 },
+        "preco": "R$ 120,00"
+      },
+      "M": {
+        "medidas": { "busto": 94, "cintura": 76, "quadril": 98, "comprimento": 54, "manga": 15 },
+        "preco": "R$ 125,00"
+      },
+      "G": {
+        "medidas": { "busto": 104, "cintura": 86, "quadril": 108, "comprimento": 56, "manga": 16 },
+        "preco": "R$ 135,00"
+      }
+    },
+    "observações": "Cores podem variar levemente conforme o lote da linha.",
+    "imagem": "src/assets/image/pecas/vestuario/blusa4.jpg"
+  },
+  {
+    "id": 5,
+    "nome": "Blusa Ponto Concha",
+    "descricao": "Blusa com decote redondo e acabamento em ponto concha.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha Anne"],
+    "agulha": "3.0 mm",
+    "tipo": "Blusas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 84, "cintura": 66, "quadril": 90, "comprimento": 50, "manga": 13 },
+        "preco": "R$ 110,00"
+      },
+      "M": {
+        "medidas": { "busto": 92, "cintura": 74, "quadril": 98, "comprimento": 52, "manga": 14 },
+        "preco": "R$ 115,00"
+      },
+      "G": {
+        "medidas": { "busto": 102, "cintura": 84, "quadril": 106, "comprimento": 54, "manga": 15 },
+        "preco": "R$ 125,00"
+      }
+    },
+    "observações": "Fio com brilho sutil e textura delicada ao toque.",
+    "imagem": "src/assets/image/pecas/vestuario/blusa5.jpg"
+  },
+  {
+    "id": 6,
+    "nome": "Blusa Canelada Leve",
+    "descricao": "Modelo canelado em crochê com caimento leve e textura delicada.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha Charme"],
+    "agulha": "3.5 mm",
+    "tipo": "Blusas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 84, "cintura": 66, "quadril": 88, "comprimento": 50, "manga": 14 },
+        "preco": "R$ 120,00"
+      },
+      "M": {
+        "medidas": { "busto": 92, "cintura": 74, "quadril": 96, "comprimento": 52, "manga": 15 },
+        "preco": "R$ 130,00"
+      },
+      "G": {
+        "medidas": { "busto": 102, "cintura": 84, "quadril": 106, "comprimento": 54, "manga": 16 },
+        "preco": "R$ 135,00"
+      }
+    },
+    "observações": "Modelagem ajustável no busto; não amassa facilmente; Totalmente florido na parte da frente e detalhado atrás.",
+    "imagem": "src/assets/image/pecas/vestuario/blusa6.jpg"
+  },
+  {
+    "id": 7,
+    "nome": "Blusa Cropped Floral",
+    "descricao": "Blusa cropped de crochê com detalhes florais vibrantes.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha Anne"],
+    "agulha": "3.0 mm",
+    "tipo": "Blusas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 82, "cintura": 64, "quadril": 86, "comprimento": 40, "manga": 12 },
+        "preco": "R$ 105,00"
+      },
+      "M": {
+        "medidas": { "busto": 90, "cintura": 72, "quadril": 94, "comprimento": 42, "manga": 13 },
+        "preco": "R$ 110,00"
+      },
+      "G": {
+        "medidas": { "busto": 100, "cintura": 82, "quadril": 104, "comprimento": 44, "manga": 14 },
+        "preco": "R$ 120,00"
+      }
+    },
+    "observações": "Ideal para o verão; permite boa ventilação; Top inspirado nabandeira de Pernmbuco",
+    "imagem": "src/assets/image/pecas/vestuario/blusa7.jpg"
+  },
+  {
+    "id": 8,
+    "nome": "Blusa Listrada",
+    "descricao": "Blusa listrada feita à mão com toque macio e cores suaves.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha de algodão"],
+    "agulha": "3.0 mm",
+    "tipo": "Blusas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 86, "cintura": 68, "quadril": 92, "comprimento": 52, "manga": 15 },
+        "preco": "R$ 115,00"
+      },
+      "M": {
+        "medidas": { "busto": 94, "cintura": 76, "quadril": 100, "comprimento": 54, "manga": 16 },
+        "preco": "R$ 120,00"
+      },
+      "G": {
+        "medidas": { "busto": 104, "cintura": 86, "quadril": 110, "comprimento": 56, "manga": 17 },
+        "preco": "R$ 130,00"
+      }
+    },
+    "observações": "Pode ser usada com top neutro por baixo para maior conforto.",
+    "imagem": "src/assets/image/pecas/vestuario/blusa8.jpg"
+  },
+  {
+    "id": 9,
+    "nome": "Blusa Colorida Retrô",
+    "descricao": "Blusa colorida estilo retrô artesanal em crochê.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha mesclada"],
+    "agulha": "3.0 mm",
+    "tipo": "Blusas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 86, "cintura": 68, "quadril": 92, "comprimento": 52, "manga": 15 },
+        "preco": "R$ 120,00"
+      },
+      "M": {
+        "medidas": { "busto": 94, "cintura": 76, "quadril": 100, "comprimento": 54, "manga": 16 },
+        "preco": "R$ 125,00"
+      },
+      "G": {
+        "medidas": { "busto": 104, "cintura": 86, "quadril": 110, "comprimento": 56, "manga": 17 },
+        "preco": "R$ 135,00"
+      }
+    },
+    "observações": "Design retrô; combina com saias e calças de cintura alta.",
+    "imagem": "src/assets/image/pecas/vestuario/blusa9.jpg"
+  },
+  {
+    "id": 10,
+    "nome": "Blusa Tons Terrosos",
+    "descricao": "Blusa em tons terrosos com pontos texturizados e estilo natural.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha Charme"],
+    "agulha": "3.5 mm",
+    "tipo": "Blusas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 86, "cintura": 68, "quadril": 90, "comprimento": 52, "manga": 15 },
+        "preco": "R$ 120,00"
+      },
+      "M": {
+        "medidas": { "busto": 94, "cintura": 76, "quadril": 98, "comprimento": 54, "manga": 16 },
+        "preco": "R$ 130,00"
+      },
+      "G": {
+        "medidas": { "busto": 104, "cintura": 86, "quadril": 108, "comprimento": 56, "manga": 17 },
+        "preco": "R$ 140,00"
+      }
+    },
+    "observações": "Fio Charme de alta resistência; excelente caimento.",
+    "imagem": "src/assets/image/pecas/vestuario/blusa10.jpg"
+  },
+  {
+    "id": 11,
+    "nome": "Blusa Floral Central",
+    "descricao": "Blusa rendada com flores centrais em destaque, feita à mão.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha Anne"],
+    "agulha": "3.0 mm",
+    "tipo": "Blusas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 86, "cintura": 68, "quadril": 92, "comprimento": 52, "manga": 15 },
+        "preco": "R$ 120,00"
+      },
+      "M": {
+        "medidas": { "busto": 94, "cintura": 76, "quadril": 100, "comprimento": 54, "manga": 16 },
+        "preco": "R$ 125,00"
+      },
+      "G": {
+        "medidas": { "busto": 104, "cintura": 86, "quadril": 110, "comprimento": 56, "manga": 17 },
+        "preco": "R$ 135,00"
+      }
+    },
+    "observações": "Flores centrais bordadas à mão; destaque artesanal.",
+    "imagem": "src/assets/image/pecas/vestuario/blusa11.jpg"
+  }
+]

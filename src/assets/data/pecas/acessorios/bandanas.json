@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "nome": "Bandana Clássica",
+    "descricao": "Bandana em crochê com ponto fantasia e amarração ajustável.",
+    "categoria": "Acessórios",
+    "linhas": ["Linha 100% algodão"],
+    "agulha": "2.5 mm",
+    "tipo": "Bandana",
+    "tamanhos": {
+      "P": {
+        "medidas": { "largura": 40, "altura": 20 },
+        "preco": "R$ 30,00"
+      },
+      "M": {
+        "medidas": { "largura": 45, "altura": 22 },
+        "preco": "R$ 35,00"
+      },
+      "G": {
+        "medidas": { "largura": 50, "altura": 25 },
+        "preco": "R$ 38,00"
+      }
+    },
+    "observações": "Possui amarração ajustável e se adapta a diferentes tamanhos de cabeça.",
+    "imagem": "src/assets/image/pecas/acessorios/bandana1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Bandana Rendada",
+    "descricao": "Bandana estilizada com detalhe rendado e cores vivas.",
+    "categoria": "Acessórios",
+    "linhas": ["Linha 100% algodão"],
+    "agulha": "2.5 mm",
+    "tipo": "Bandana",
+    "tamanhos": {
+      "P": {
+        "medidas": { "largura": 40, "altura": 20 },
+        "preco": "R$ 32,00"
+      },
+      "M": {
+        "medidas": { "largura": 45, "altura": 22 },
+        "preco": "R$ 35,00"
+      },
+      "G": {
+        "medidas": { "largura": 50, "altura": 25 },
+        "preco": "R$ 38,00"
+      }
+    },
+    "observações": "Ponta alongada para melhor ajuste e conforto no uso.",
+    "imagem": "src/assets/image/pecas/acessorios/bandana2.jpg"
+  }
+]

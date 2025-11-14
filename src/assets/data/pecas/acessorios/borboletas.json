@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "nome": "Aplique de Borboleta",
+    "descricao": "Aplique de borboleta feito em crochê decorativo, ideal para roupas.",
+    "categoria": "Acessórios Decorativos",
+    "linhas": ["Linha Anne"],
+    "agulha": "2.0 mm",
+    "tipo": "Acessórios",
+    "tamanhos": {
+      "P": {
+        "medidas": { "largura": 8, "altura": 6 },
+        "preco": "R$ 10,00"
+      },
+      "M": {
+        "medidas": { "largura": 10, "altura": 8 },
+        "preco": "R$ 12,00"
+      },
+      "G": {
+        "medidas": { "largura": 12, "altura": 9 },
+        "preco": "R$ 15,00"
+      }
+    },
+    "observações": "Ideal para aplicação em roupas infantis ou bolsas.",
+    "imagem": "src/assets/image/pecas/acessorios/borboleta1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Borboleta Colorida Dupla",
+    "descricao": "Borboleta com asas duplas coloridas e efeito degradê.",
+    "categoria": "Acessórios Decorativos",
+    "linhas": ["Linha mesclada"],
+    "agulha": "2.0 mm",
+    "tipo": "Acessórios",
+    "tamanhos": {
+      "P": {
+        "medidas": { "largura": 8, "altura": 6 },
+        "preco": "R$ 10,00"
+      },
+      "M": {
+        "medidas": { "largura": 9, "altura": 7 },
+        "preco": "R$ 12,00"
+      },
+      "G": {
+        "medidas": { "largura": 10, "altura": 8 },
+        "preco": "R$ 15,00"
+      }
+    },
+    "observações": "Pode ser utilizada em cortinas, tiaras ou lembranças.",
+    "imagem": "src/assets/image/pecas/acessorios/borboleta2.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Borboleta Aplicada",
+    "descricao": "Borboleta delicada para aplicação em roupas e acessórios.",
+    "categoria": "Acessórios Decorativos",
+    "linhas": ["Linha 100% algodão"],
+    "agulha": "2.0 mm",
+    "tipo": "Acessórios",
+    "tamanhos": {
+      "P": {
+        "medidas": { "largura": 8, "altura": 6 },
+        "preco": "R$ 10,00"
+      },
+      "M": {
+        "medidas": { "largura": 9, "altura": 7 },
+        "preco": "R$ 12,00"
+      },
+      "G": {
+        "medidas": { "largura": 10, "altura": 8 },
+        "preco": "R$ 15,00"
+      }
+    },
+    "observações": "Aplicável com cola para tecido ou costura simples.",
+    "imagem": "src/assets/image/pecas/acessorios/borboleta3.jpg"
+  }
+]

@@ -1,0 +1,30 @@
+<section class="nao-encontrada" aria-labelledby="titulo-404">
+  <div class="container">
+    <img
+      src="/assets/image/logo/logo.png"
+      alt="Logotipo Vane Alves Crochê"
+      class="icone"
+      loading="lazy"
+      decoding="async"
+    />
+
+    <h1 id="titulo-404">404</h1>
+    <h2>Página não encontrada</h2>
+
+    <p>
+      O fio se perdeu no novelo... mas não se preocupe!<br />
+      Volte para o início e continue crochetando com a gente!
+    </p>
+
+    <div class="acoes">
+      <a routerLink="/" class="btn-outline">
+        <i class="fa-solid fa-house"></i> Ir para o início
+      </a> 
+      
+      <button (click)="voltar()" class="btn">
+        <i class="fa-solid fa-arrow-left"></i> Voltar
+      </button>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,92 @@
+.footer-classico {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1rem 0;
+  font-family: var(--font-script);
+  letter-spacing: 0.4px;
+  cursor: default;
+  box-shadow: var(--shadow-soft);
+  margin-top: auto;
+}
+
+.footer-classico .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.assinatura {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.footer-classico .name {
+  font-size: 1.3rem;
+  color: var(--color-panel);
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+.redes a {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.redes a:hover {
+  transform: scale(1.15);
+}
+
+.redes a[aria-label*="YouTube"]:hover {
+  color: var(--color-youtube);
+}
+
+.redes a[aria-label*="Instagram"]:hover {
+  color: var(--color-instagram);
+}
+
+.redes a[aria-label*="WhatsApp"]:hover {
+  color: var(--color-whatsapp);
+}
+
+.redes a[aria-label*="E-mail"]:hover {
+  color: var(--color-panel);
+}
+
+.direitos {
+  font-size: 0.9rem;
+  font-family: var(--font-primary);
+  color: var(--color-white);
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .footer-classico {
+    padding: 1rem 0 0.8rem;
+  }
+
+  .footer-logo .logo-img {
+    height: 50px;
+  }
+
+  .assinatura {
+    font-size: 1.1rem;
+  }
+
+  .redes a {
+    font-size: 1.3rem;
+  }
+
+  .direitos {
+    font-size: 0.8rem;
+  }
+}

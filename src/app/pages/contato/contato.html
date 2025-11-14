@@ -1,0 +1,48 @@
+<section class="contato">
+  <div class="container">
+    <header class="topo-contato">
+      <h1>Entre em Contato</h1>
+      <p>Escolha uma das opções abaixo para se conectar conosco</p>
+    </header>
+
+    <div class="cards-contato">
+      <div class="card" *ngFor="let c of contatos; trackBy: trackByNome">
+        <div class="icone" [style.color]="c.cor" aria-hidden="true">
+          <i [class]="c.icone"></i>
+        </div>
+
+        <h3>{{ c.nome }}</h3>
+        <p>{{ c.descricao }}</p>
+
+        <a
+          *ngIf="ehInterno(c.link); else externo"
+          class="btn-link"
+          [routerLink]="c.link"
+          aria-label="Acessar {{ c.nome }}"
+        >
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          Acessar
+        </a>
+
+        <ng-template #externo>
+          <a
+            class="btn-link"
+            [href]="c.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar {{ c.nome }} (abre em nova aba)"
+          >
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            Visitar
+          </a>
+        </ng-template>
+      </div>
+    </div>
+
+    <div class="rodape-contato">
+      <a routerLink="/" class="btn-voltar" aria-label="Voltar para a página inicial">
+        Voltar para Início
+      </a>
+    </div>
+  </div>
+</section>

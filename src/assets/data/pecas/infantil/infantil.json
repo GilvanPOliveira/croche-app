@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "nome": "Conjunto Bebê Clássico",
+    "descricao": "Conjunto bebê em crochê com acabamento delicado.",
+    "categoria": "Infantil",
+    "linhas": ["Linha bebê antialérgica"],
+    "agulha": "2.0 mm",
+    "tipo": "Infantil",
+    "tamanhos": {
+      "P": {
+        "medidas": { "idade": "0-3 meses", "busto": 44, "comprimento": 26, "manga": 18 },
+        "preco": "R$ 95,00"
+      },
+      "M": {
+        "medidas": { "idade": "3-6 meses", "busto": 50, "comprimento": 28, "manga": 20 },
+        "preco": "R$ 110,00"
+      },
+      "G": {
+        "medidas": { "idade": "6-9 meses", "busto": 56, "comprimento": 30, "manga": 22 },
+        "preco": "R$ 120,00"
+      }
+    },
+    "observações": "Ideal para clima ameno; fio hipoalergênico suave ao toque.",
+    "imagem": "src/assets/image/pecas/infantil/bebe1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Macacão Bebê Soft",
+    "descricao": "Macacão de crochê para bebê com toque suave e elástico natural.",
+    "categoria": "Infantil",
+    "linhas": ["Linha soft bebê"],
+    "agulha": "2.0 mm",
+    "tipo": "Infantil",
+    "tamanhos": {
+      "P": {
+        "medidas": { "idade": "0-3 meses", "busto": 46, "comprimento": 48, "manga": 20 },
+        "preco": "R$ 95,00"
+      },
+      "M": {
+        "medidas": { "idade": "3-6 meses", "busto": 50, "comprimento": 52, "manga": 22 },
+        "preco": "R$ 105,00"
+      },
+      "G": {
+        "medidas": { "idade": "6-9 meses", "busto": 54, "comprimento": 56, "manga": 23 },
+        "preco": "R$ 115,00"
+      }
+    },
+    "observações": "Fácil de vestir, com abertura para trocas rápidas do bebê.",
+    "imagem": "src/assets/image/pecas/infantil/bebe2.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Casaquinho e Sapatinho Bebê",
+    "descricao": "Conjunto com casaquinho e sapatinho combinando, feito à mão.",
+    "categoria": "Infantil",
+    "linhas": ["Linha bebê", "Botões de acrílico"],
+    "agulha": "2.5 mm",
+    "tipo": "Infantil",
+    "tamanhos": {
+      "P": {
+        "medidas": { "idade": "0-3 meses", "busto": 45, "comprimento": 27, "manga": 18 },
+        "preco": "R$ 100,00"
+      },
+      "M": {
+        "medidas": { "idade": "3-6 meses", "busto": 50, "comprimento": 29, "manga": 20 },
+        "preco": "R$ 110,00"
+      },
+      "G": {
+        "medidas": { "idade": "6-9 meses", "busto": 55, "comprimento": 31, "manga": 22 },
+        "preco": "R$ 120,00"
+      }
+    },
+    "observações": "Botões decorativos e acabamento reforçado para maior durabilidade.",
+    "imagem": "src/assets/image/pecas/infantil/bebe3.jpg"
+  },
+  {
+    "id": 4,
+    "nome": "Macacão de Crochê Leve",
+    "descricao": "Macacão de crochê leve e elegante, perfeito para dias de verão.",
+    "categoria": "Infantil",
+    "linhas": ["Linha Charme"],
+    "agulha": "3.5 mm",
+    "tipo": "Infantil",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 86, "cintura": 68, "quadril": 92, "comprimento": 130 },
+        "preco": "R$ 170,00"
+      },
+      "M": {
+        "medidas": { "busto": 94, "cintura": 76, "quadril": 100, "comprimento": 135 },
+        "preco": "R$ 180,00"
+      },
+      "G": {
+        "medidas": { "busto": 104, "cintura": 86, "quadril": 110, "comprimento": 140 },
+        "preco": "R$ 190,00"
+      }
+    },
+    "observações": "Pode ser usada com ou sem forro, conforme preferência.",
+    "imagem": "src/assets/image/pecas/infantil/macacao1.jpg"
+  },
+  {
+    "id": 5,
+    "nome": "Sapatinho Bebê Tradicional",
+    "descricao": "Sapatinho de crochê macio e confortável, ideal para recém-nascidos.",
+    "categoria": "Infantil",
+    "linhas": ["Linha bebê"],
+    "agulha": "2.0 mm",
+    "tipo": "Infantil",
+    "tamanhos": {
+      "P": {
+        "medidas": { "idade": "0-3 meses", "comprimento": 9 },
+        "preco": "R$ 40,00"
+      },
+      "M": {
+        "medidas": { "idade": "3-6 meses", "comprimento": 10 },
+        "preco": "R$ 42,00"
+      },
+      "G": {
+        "medidas": { "idade": "6-9 meses", "comprimento": 11 },
+        "preco": "R$ 45,00"
+      }
+    },
+    "observações": "Solado antiderrapante artesanal; ideal para uso interno.",
+    "imagem": "src/assets/image/pecas/infantil/sapato1.jpg"
+  },
+  {
+    "id": 6,
+    "nome": "Sapatinho com Flores",
+    "descricao": "Sapatinho com detalhes florais delicados e fita decorativa.",
+    "categoria": "Infantil",
+    "linhas": ["Linha bebê antialérgica"],
+    "agulha": "2.0 mm",
+    "tipo": "Infantil",
+    "tamanhos": {
+      "P": {
+        "medidas": { "idade": "0-3 meses", "comprimento": 9 },
+        "preco": "R$ 40,00"
+      },
+      "M": {
+        "medidas": { "idade": "3-6 meses", "comprimento": 10 },
+        "preco": "R$ 42,00"
+      },
+      "G": {
+        "medidas": { "idade": "6-9 meses", "comprimento": 11 },
+        "preco": "R$ 45,00"
+      }
+    },
+    "observações": "Fita de cetim removível para lavagem.",
+    "imagem": "src/assets/image/pecas/infantil/sapato2.jpg"
+  },
+  {
+    "id": 7,
+    "nome": "Sapatinho Mocassim",
+    "descricao": "Sapatinho tipo mocassim feito à mão com acabamento fino.",
+    "categoria": "Infantil",
+    "linhas": ["Linha bebê"],
+    "agulha": "2.0 mm",
+    "tipo": "Infantil",
+    "tamanhos": {
+      "P": {
+        "medidas": { "idade": "0-3 meses", "comprimento": 9 },
+        "preco": "R$ 40,00"
+      },
+      "M": {
+        "medidas": { "idade": "3-6 meses", "comprimento": 10 },
+        "preco": "R$ 42,00"
+      },
+      "G": {
+        "medidas": { "idade": "6-9 meses", "comprimento": 11 },
+        "preco": "R$ 45,00"
+      }
+    },
+    "observações": "Base reforçada para melhor apoio do pezinho do bebê.",
+    "imagem": "src/assets/image/pecas/infantil/sapato3.jpg"
+  },
+  {
+    "id": 8,
+    "nome": "Sapatinho com Laço",
+    "descricao": "Sapatinho com laço de cetim e acabamento delicado.",
+    "categoria": "Infantil",
+    "linhas": ["Linha bebê", "Fita de cetim"],
+    "agulha": "2.0 mm",
+    "tipo": "Infantil",
+    "tamanhos": {
+      "P": {
+        "medidas": { "idade": "0-3 meses", "comprimento": 9 },
+        "preco": "R$ 42,00"
+      },
+      "M": {
+        "medidas": { "idade": "3-6 meses", "comprimento": 10 },
+        "preco": "R$ 45,00"
+      },
+      "G": {
+        "medidas": { "idade": "6-9 meses", "comprimento": 11 },
+        "preco": "R$ 48,00"
+      }
+    },
+    "observações": "Ideal para presente; acompanha embalagem artesanal.",
+    "imagem": "src/assets/image/pecas/infantil/sapato4.jpg"
+  },
+  {
+    "id": 9,
+    "nome": "Sapatinho com Botão",
+    "descricao": "Sapatinho fechado com botões laterais e acabamento confortável.",
+    "categoria": "Infantil",
+    "linhas": ["Linha soft"],
+    "agulha": "2.5 mm",
+    "tipo": "Infantil",
+    "tamanhos": {
+      "P": {
+        "medidas": { "idade": "0-3 meses", "comprimento": 9 },
+        "preco": "R$ 40,00"
+      },
+      "M": {
+        "medidas": { "idade": "3-6 meses", "comprimento": 10 },
+        "preco": "R$ 42,00"
+      },
+      "G": {
+        "medidas": { "idade": "6-9 meses", "comprimento": 11 },
+        "preco": "R$ 45,00"
+      }
+    },
+    "observações": "Botão lateral facilita o calce em recém-nascidos.",
+    "imagem": "src/assets/image/pecas/infantil/sapato5.jpg"
+  }
+]

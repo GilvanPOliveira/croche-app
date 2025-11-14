@@ -1,0 +1,330 @@
+[
+  {
+    "id": 1,
+    "nome": "Sousplat Rendido Clássico",
+    "descricao": "Sousplat rendado feito à mão, ideal para mesas elegantes.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante nº6"],
+    "agulha": "4.0 mm",
+    "tipo": "Sousplat",
+    "tamanhos": {
+      "P": {
+        "medidas": { "diâmetro": 36 },
+        "preco": "R$ 22,00"
+      },
+      "M": {
+        "medidas": { "diâmetro": 38 },
+        "preco": "R$ 25,00"
+      },
+      "G": {
+        "medidas": { "diâmetro": 40 },
+        "preco": "R$ 28,00"
+      }
+    },
+    "observações": "Ideal para jantares e eventos; pode ser lavado à mão.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplat1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Sousplat Ponto Estrela",
+    "descricao": "Sousplat em crochê com ponto estrela e acabamento reforçado.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante colorido"],
+    "agulha": "4.0 mm",
+    "tipo": "Sousplat",
+    "tamanhos": {
+      "P": {
+        "medidas": { "diâmetro": 36 },
+        "preco": "R$ 22,00"
+      },
+      "M": {
+        "medidas": { "diâmetro": 38 },
+        "preco": "R$ 25,00"
+      },
+      "G": {
+        "medidas": { "diâmetro": 40 },
+        "preco": "R$ 28,00"
+      }
+    },
+    "observações": "Pode ser usado como centro de mesa decorativo.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplat2.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Sousplat Neutro Rendado",
+    "descricao": "Sousplat em tons neutros com borda rendada e toque suave.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante cru"],
+    "agulha": "4.0 mm",
+    "tipo": "Sousplat",
+    "tamanhos": {
+      "P": {
+        "medidas": { "diâmetro": 36 },
+        "preco": "R$ 22,00"
+      },
+      "M": {
+        "medidas": { "diâmetro": 38 },
+        "preco": "R$ 25,00"
+      },
+      "G": {
+        "medidas": { "diâmetro": 40 },
+        "preco": "R$ 28,00"
+      }
+    },
+    "observações": "Tom neutro combina com diversas louças e estilos.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplat3.jpg"
+  },
+  {
+    "id": 4,
+    "nome": "Sousplat Colorido Reforçado",
+    "descricao": "Sousplat colorido com acabamento reforçado e borda firme.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante nº6"],
+    "agulha": "4.0 mm",
+    "tipo": "Sousplat",
+    "tamanhos": {
+      "P": {
+        "medidas": { "diâmetro": 36 },
+        "preco": "R$ 22,00"
+      },
+      "M": {
+        "medidas": { "diâmetro": 38 },
+        "preco": "R$ 25,00"
+      },
+      "G": {
+        "medidas": { "diâmetro": 40 },
+        "preco": "R$ 28,00"
+      }
+    },
+    "observações": "Indicado para uso em mesa posta com guardanapo de tecido.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplat4.jpg"
+  },
+  {
+    "id": 5,
+    "nome": "Sousplat Ponto Caracol",
+    "descricao": "Sousplat decorativo com ponto caracol e acabamento artesanal.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante colorido"],
+    "agulha": "4.0 mm",
+    "tipo": "Sousplat",
+    "tamanhos": {
+      "P": {
+        "medidas": { "diâmetro": 36 },
+        "preco": "R$ 22,00"
+      },
+      "M": {
+        "medidas": { "diâmetro": 38 },
+        "preco": "R$ 25,00"
+      },
+      "G": {
+        "medidas": { "diâmetro": 40 },
+        "preco": "R$ 28,00"
+      }
+    },
+    "observações": "Design espiralado; dá movimento visual à mesa.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplat5.jpg"
+  },
+  {
+    "id": 6,
+    "nome": "Sousplat Simples Rústico",
+    "descricao": "Sousplat simples com toque rústico e natural.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante cru"],
+    "agulha": "4.0 mm",
+    "tipo": "Sousplat",
+    "tamanhos": {
+      "P": {
+        "medidas": { "diâmetro": 35 },
+        "preco": "R$ 20,00"
+      },
+      "M": {
+        "medidas": { "diâmetro": 37 },
+        "preco": "R$ 22,00"
+      },
+      "G": {
+        "medidas": { "diâmetro": 39 },
+        "preco": "R$ 24,00"
+      }
+    },
+    "observações": "Ideal para decorações rústicas e naturais.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplat6.jpg"
+  },
+  {
+    "id": 7,
+    "nome": "Sousplat com Borda Firme",
+    "descricao": "Sousplat com pontos fechados e borda firme.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante nº6"],
+    "agulha": "4.0 mm",
+    "tipo": "Sousplat",
+    "tamanhos": {
+      "P": {
+        "medidas": { "diâmetro": 36 },
+        "preco": "R$ 22,00"
+      },
+      "M": {
+        "medidas": { "diâmetro": 38 },
+        "preco": "R$ 25,00"
+      },
+      "G": {
+        "medidas": { "diâmetro": 40 },
+        "preco": "R$ 27,00"
+      }
+    },
+    "observações": "Estrutura firme; excelente base para pratos fundos.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplat7.jpg"
+  },
+  {
+    "id": 8,
+    "nome": "Sousplat Floral Especial",
+    "descricao": "Sousplat floral ideal para ocasiões especiais e decoração de mesa.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante colorido"],
+    "agulha": "4.0 mm",
+    "tipo": "Sousplat",
+    "tamanhos": {
+      "P": {
+        "medidas": { "diâmetro": 36 },
+        "preco": "R$ 22,00"
+      },
+      "M": {
+        "medidas": { "diâmetro": 38 },
+        "preco": "R$ 25,00"
+      },
+      "G": {
+        "medidas": { "diâmetro": 40 },
+        "preco": "R$ 28,00"
+      }
+    },
+    "observações": "Peça colorida, ideal para festas e almoços familiares.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplat8.jpg"
+  },
+  {
+    "id": 9,
+    "nome": "Sousplat com Centro Contrastante",
+    "descricao": "Sousplat com centro contrastante e borda delicada, feito à mão.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante cru e colorido"],
+    "agulha": "4.0 mm",
+    "tipo": "Sousplat",
+    "tamanhos": {
+      "P": { "medidas": { "diâmetro": 36 }, "preco": "R$ 22,00" },
+      "M": { "medidas": { "diâmetro": 38 }, "preco": "R$ 25,00" },
+      "G": { "medidas": { "diâmetro": 40 }, "preco": "R$ 28,00" }
+    },
+    "observações": "Centro colorido realça a composição da mesa posta.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplat9.jpg"
+  },
+  {
+    "id": 10,
+    "nome": "Sousplat Ponto Concha",
+    "descricao": "Sousplat com ponto concha e acabamento sofisticado.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante nº6"],
+    "agulha": "4.0 mm",
+    "tipo": "Sousplat",
+    "tamanhos": {
+      "P": { "medidas": { "diâmetro": 36 }, "preco": "R$ 22,00" },
+      "M": { "medidas": { "diâmetro": 38 }, "preco": "R$ 25,00" },
+      "G": { "medidas": { "diâmetro": 40 }, "preco": "R$ 28,00" }
+    },
+    "observações": "Ideal para casamentos e eventos sofisticados.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplat10.jpg"
+  },
+  {
+    "id": 11,
+    "nome": "Conjunto Sousplats 6 Lugares",
+    "descricao": "Conjunto de sousplats combinando para 6 lugares.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante nº6"],
+    "agulha": "4.0 mm",
+    "tipo": "Conjuntos",
+    "tamanhos": {
+      "P": { "medidas": { "diâmetro": 36, "quantidade": 4 }, "preco": "R$ 130,00" },
+      "M": { "medidas": { "diâmetro": 38, "quantidade": 6 }, "preco": "R$ 150,00" },
+      "G": { "medidas": { "diâmetro": 40, "quantidade": 8 }, "preco": "R$ 170,00" }
+    },
+    "observações": "Cada peça do conjunto tem variação sutil de tom.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplatConjunto1.jpg"
+  },
+  {
+    "id": 12,
+    "nome": "Sousplats com Guardanapos",
+    "descricao": "Sousplats combinando com guardanapos artesanais de tecido.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante cru"],
+    "agulha": "4.0 mm",
+    "tipo": "Conjuntos",
+    "tamanhos": {
+      "P": { "medidas": { "diâmetro": 36, "quantidade": 4 }, "preco": "R$ 130,00" },
+      "M": { "medidas": { "diâmetro": 38, "quantidade": 6 }, "preco": "R$ 140,00" },
+      "G": { "medidas": { "diâmetro": 40, "quantidade": 8 }, "preco": "R$ 160,00" }
+    },
+    "observações": "Inclui guardanapos coordenados; combinação sob medida.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplatConjunto2.jpg"
+  },
+  {
+    "id": 13,
+    "nome": "Conjunto Sousplats Coloridos",
+    "descricao": "Conjunto de sousplats coloridos para mesa posta vibrante.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante colorido"],
+    "agulha": "4.0 mm",
+    "tipo": "Conjuntos",
+    "tamanhos": {
+      "P": { "medidas": { "diâmetro": 36, "quantidade": 4 }, "preco": "R$ 140,00" },
+      "M": { "medidas": { "diâmetro": 38, "quantidade": 6 }, "preco": "R$ 160,00" },
+      "G": { "medidas": { "diâmetro": 40, "quantidade": 8 }, "preco": "R$ 180,00" }
+    },
+    "observações": "As cores podem variar entre conjuntos.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplatConjunto3.jpg"
+  },
+  {
+    "id": 14,
+    "nome": "Sousplats Tons Neutros",
+    "descricao": "Sousplats em tons neutros combinando entre si.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante cru e bege"],
+    "agulha": "4.0 mm",
+    "tipo": "Conjuntos",
+    "tamanhos": {
+      "P": { "medidas": { "diâmetro": 36, "quantidade": 4 }, "preco": "R$ 130,00" },
+      "M": { "medidas": { "diâmetro": 38, "quantidade": 6 }, "preco": "R$ 150,00" },
+      "G": { "medidas": { "diâmetro": 40, "quantidade": 8 }, "preco": "R$ 170,00" }
+    },
+    "observações": "Tons neutros combinam com decorações minimalistas.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplatConjunto4.jpg"
+  },
+  {
+    "id": 15,
+    "nome": "Sousplats com Borda Colorida",
+    "descricao": "Conjunto com borda colorida e centro neutro elegante.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante nº6"],
+    "agulha": "4.0 mm",
+    "tipo": "Conjuntos",
+    "tamanhos": {
+      "P": { "medidas": { "diâmetro": 36, "quantidade": 4 }, "preco": "R$ 130,00" },
+      "M": { "medidas": { "diâmetro": 38, "quantidade": 6 }, "preco": "R$ 150,00" },
+      "G": { "medidas": { "diâmetro": 40, "quantidade": 8 }, "preco": "R$ 170,00" }
+    },
+    "observações": "Borda colorida artesanal; realça a cor do centro.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplatConjunto5.jpg"
+  },
+  {
+    "id": 16,
+    "nome": "Sousplats Florais Uniformes",
+    "descricao": "Sousplats florais com acabamento uniforme e borda delicada.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante colorido"],
+    "agulha": "4.0 mm",
+    "tipo": "Conjuntos",
+    "tamanhos": {
+      "P": { "medidas": { "diâmetro": 36, "quantidade": 4 }, "preco": "R$ 140,00" },
+      "M": { "medidas": { "diâmetro": 38, "quantidade": 6 }, "preco": "R$ 160,00" },
+      "G": { "medidas": { "diâmetro": 40, "quantidade": 8 }, "preco": "R$ 180,00" }
+    },
+    "observações": "Padrão floral leve; ideal para mesas de verão.",
+    "imagem": "src/assets/image/pecas/decoracao/sousplatConjunto6.jpg"
+  }
+]

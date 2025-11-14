@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "nome": "Colete Boho com Franjas",
+    "descricao": "Colete em crochê estilo boho, com franjas e caimento leve.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha Anne"],
+    "agulha": "3.0 mm",
+    "tipo": "Coletes",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 86, "comprimento": 58 },
+        "preco": "R$ 140,00"
+      },
+      "M": {
+        "medidas": { "busto": 94, "comprimento": 60 },
+        "preco": "R$ 150,00"
+      },
+      "G": {
+        "medidas": { "busto": 104, "comprimento": 62 },
+        "preco": "R$ 160,00"
+      }
+    },
+    "observações": "Franjas podem ser aparadas conforme preferência da cliente.",
+    "imagem": "src/assets/image/pecas/vestuario/colete1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Colete Rendido Elegante",
+    "descricao": "Colete rendado em crochê leve e elegante, perfeito para sobreposições.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha Charme"],
+    "agulha": "3.5 mm",
+    "tipo": "Coletes",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 86, "comprimento": 58 },
+        "preco": "R$ 140,00"
+      },
+      "M": {
+        "medidas": { "busto": 94, "comprimento": 60 },
+        "preco": "R$ 145,00"
+      },
+      "G": {
+        "medidas": { "busto": 104, "comprimento": 62 },
+        "preco": "R$ 155,00"
+      }
+    },
+    "observações": "Ideal para uso casual sobre blusas lisas.",
+    "imagem": "src/assets/image/pecas/vestuario/colete2.jpg"
+  }
+]

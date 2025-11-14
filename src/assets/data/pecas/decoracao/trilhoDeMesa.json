@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "nome": "Trilho de Mesa Rendido",
+    "descricao": "Trilho de mesa rendado com pontos delicados e acabamento artesanal.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante cru"],
+    "agulha": "3.5 mm",
+    "tipo": "Trilhos de mesa",
+    "tamanhos": {
+      "P": { "medidas": { "comprimento": 100, "largura": 30 }, "preco": "R$ 130,00" },
+      "M": { "medidas": { "comprimento": 120, "largura": 35 }, "preco": "R$ 140,00" },
+      "G": { "medidas": { "comprimento": 140, "largura": 40 }, "preco": "R$ 150,00" }
+    },
+    "observações": "Acabamento nas bordas evita desfiar; lavável à mão.",
+    "imagem": "src/assets/image/pecas/decoracao/trilhoMesa1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Trilho de Mesa Floral",
+    "descricao": "Trilho de mesa colorido com flores centrais artesanais.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante colorido"],
+    "agulha": "3.5 mm",
+    "tipo": "Trilhos de mesa",
+    "tamanhos": {
+      "P": { "medidas": { "comprimento": 100, "largura": 30 }, "preco": "R$ 130,00" },
+      "M": { "medidas": { "comprimento": 120, "largura": 35 }, "preco": "R$ 145,00" },
+      "G": { "medidas": { "comprimento": 140, "largura": 40 }, "preco": "R$ 155,00" }
+    },
+    "observações": "Flores centrais costuradas individualmente.",
+    "imagem": "src/assets/image/pecas/decoracao/trilhoMesa2.jpg"
+  }
+]

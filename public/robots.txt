@@ -1,0 +1,20 @@
+# Permissões gerais para mecanismos de busca
+User-agent: *
+Allow: /
+
+# Bloquear pastas técnicas e arquivos internos
+Disallow: /assets/
+Disallow: /environments/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /scripts/
+Disallow: /config/
+Disallow: /tmp/
+Disallow: /tests/
+
+# Evitar indexar parâmetros dinâmicos (Angular, query strings)
+Disallow: /*?*
+Disallow: /*&*
+
+# Identificação opcional
+Host: https://croche-app.vercel.app/

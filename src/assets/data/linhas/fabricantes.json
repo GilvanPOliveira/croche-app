@@ -1,0 +1,12 @@
+[
+  {
+    "nome": "Círculo",
+    "slug": "circulo",
+    "linhas": ["Anne", "Cléa", "Cordoné", "Encanto Slim"]
+  },
+  {
+    "nome": "Pingouin",
+    "slug": "pingouin",
+    "linhas": ["Bella Fashion"]
+  }
+]

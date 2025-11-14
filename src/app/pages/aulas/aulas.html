@@ -1,0 +1,30 @@
+<section class="aulas">
+  <div class="container">
+    <h1>Nossas Aulas</h1>
+
+    <div class="grid">
+      <div class="card" *ngFor="let aula of listaAulas">
+        <img [src]="aula.imagem" [alt]="aula.titulo" loading="eager" fetchpriority="high" />
+
+        <div class="conteudo">
+          <h2>{{ aula.titulo }}</h2>
+          <p>{{ aula.descricao }}</p>
+
+          <button
+            *ngIf="!aula.acesso"
+            class="btn"
+            (click)="comprarAula(aula)">
+            Comprar — R$ {{ aula.preco | number:'1.2-2' }}
+          </button>
+
+          <a
+            *ngIf="aula.acesso"
+            [routerLink]="['/aulas', aula.id]"
+            class="btn-outline">
+            Acessar Aula
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

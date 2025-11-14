@@ -1,0 +1,18 @@
+<header>
+  <div class="container header-container">
+    <div class="logo">
+      <a routerLink="/" aria-label="Página inicial">
+        <img src="assets/image/logo/logo.png" alt="Logo Vane Alves" loading="eager" fetchpriority="high" />
+      </a>
+    </div>
+
+    <nav>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Início</a>
+      <a routerLink="/aulas" routerLinkActive="active">Aulas</a>
+      <a routerLink="/pecas" routerLinkActive="active">Peças</a>
+      <a routerLink="/encomendas" routerLinkActive="active">Encomendas</a>
+      <a routerLink="/contato" routerLinkActive="active">Contato</a>
+    </nav>
+
+  </div>
+</header>

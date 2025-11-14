@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "nome": "Peça Customizada Colorida",
+    "descricao": "Peça customizada com aplicação em crochê colorido sob medida.",
+    "categoria": "Customizados",
+    "linhas": ["Linha variada"],
+    "agulha": "variável",
+    "tipo": "Customizados",
+    "tamanhos": {
+      "P": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "M": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "G": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      }
+    },
+    "observações": "Cada peça é feita sob encomenda conforme o tecido base. Clique em Customizar e descreva como quer a sua customização!",
+    "imagem": "src/assets/image/pecas/customizados/customizado1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Roupa Customizada com Crochê",
+    "descricao": "Roupa com detalhes personalizados e bordados em crochê artesanal.",
+    "categoria": "Customizados",
+    "linhas": ["Linha colorida"],
+    "agulha": "variável",
+    "tipo": "Customizados",
+    "tamanhos": {
+      "P": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "M": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "G": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      }
+    },
+    "observações": "As tonalidades do fio variam de acordo com o pedido. Clique em Customizar e descreva como quer a sua customização!",
+    "imagem": "src/assets/image/pecas/customizados/customizado2.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Jeans com Aplicações Florais",
+    "descricao": "Detalhes florais aplicados em tecido jeans, acabamento artesanal.",
+    "categoria": "Customizados",
+    "linhas": ["Linha Anne"],
+    "agulha": "2.5 mm",
+    "tipo": "Customizados",
+    "tamanhos": {
+      "P": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "M": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "G": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      }
+    },
+    "observações": "Aplicações fixadas com costura reforçada; lavável à mão. Clique em Customizar e descreva como quer a sua customização!",
+    "imagem": "src/assets/image/pecas/customizados/customizado3.jpg"
+  },
+  {
+    "id": 4,
+    "nome": "Bordado Customizado Colorido",
+    "descricao": "Customização com fios coloridos e bordados sob medida.",
+    "categoria": "Customizados",
+    "linhas": ["Linha variada"],
+    "agulha": "variável",
+    "tipo": "Customizados",
+    "tamanhos": {
+      "P": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "M": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "G": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      }
+    },
+    "observações": "Requer tempo extra de produção devido à personalização. Clique em Customizar e descreva como quer a sua customização!",
+    "imagem": "src/assets/image/pecas/customizados/customizado4.jpg"
+  },
+  {
+    "id": 5,
+    "nome": "Aplicação Floral Customizada",
+    "descricao": "Aplicações em crochê com temas florais personalizáveis.",
+    "categoria": "Customizados",
+    "linhas": ["Linha Charme"],
+    "agulha": "2.5 mm",
+    "tipo": "Customizados",
+    "tamanhos": {
+      "P": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "M": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "G": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      }
+    },
+    "observações": "Pode ser aplicada em vestidos, jaquetas ou almofadas. Clique em Customizar e descreva como quer a sua customização!",
+    "imagem": "src/assets/image/pecas/customizados/customizado5.jpg"
+  },
+  {
+    "id": 6,
+    "nome": "Roupas com Detalhes de Crochê",
+    "descricao": "Detalhes decorativos em crochê aplicados em roupas sob medida.",
+    "categoria": "Customizados",
+    "linhas": ["Linha de algodão"],
+    "agulha": "2.5 mm",
+    "tipo": "Customizados",
+    "tamanhos": {
+      "P": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "M": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "G": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      }
+    },
+    "observações": "Trabalhada sob medida com personalização total. Clique em Customizar e descreva como quer a sua customização!",
+    "imagem": "src/assets/image/pecas/customizados/customizado6.jpg"
+  },
+  {
+    "id": 7,
+    "nome": "Aplique Floral Artesanal",
+    "descricao": "Aplique artesanal com tema floral feito em crochê fino.",
+    "categoria": "Customizados",
+    "linhas": ["Linha colorida"],
+    "agulha": "2.0 mm",
+    "tipo": "Customizados",
+    "tamanhos": {
+      "P": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "M": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "G": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      }
+    },
+    "observações": "Ideal para aplicação em jeans, bolsas ou saias. Clique em Customizar e descreva como quer a sua customização!",
+    "imagem": "src/assets/image/pecas/customizados/customizado7.jpg"
+  },
+  {
+    "id": 8,
+    "nome": "Aplicação Especial Sob Medida",
+    "descricao": "Aplicação especial feita sob medida em crochê artesanal.",
+    "categoria": "Customizados",
+    "linhas": ["Linha de algodão"],
+    "agulha": "2.5 mm",
+    "tipo": "Customizados",
+    "tamanhos": {
+      "P": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "M": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      },
+      "G": {
+        "medidas": { "ajuste": "sob medida" },
+        "preco": "Sob consulta"
+      }
+    },
+    "observações": "Encomenda sob medida; ajuste visual conforme tecido do cliente. Clique em Customizar e descreva como quer a sua customização!",
+    "imagem": "src/assets/image/pecas/customizados/customizado8.jpg"
+  },
+  {
+    "id": 9,
+    "nome": "Rede Artesanal com Franjas para Pet",
+    "descricao": "Rede artesanal feita em crochê com franjas laterais e toque macio para seu pet.",
+    "categoria": "Customizados",
+    "linhas": ["Barbante cru nº6"],
+    "agulha": "5.0 mm",
+    "tipo": "Rede pet",
+    "tamanhos": {
+      "P": {
+        "medidas": { "comprimento": 200, "largura": 120 },
+        "preco": "R$ 230,00"
+      },
+      "M": {
+        "medidas": { "comprimento": 250, "largura": 140 },
+        "preco": "R$ 250,00"
+      },
+      "G": {
+        "medidas": { "comprimento": 280, "largura": 150 },
+        "preco": "R$ 270,00"
+      }
+    },
+    "observações": "Suporta até 120kg distribuídos; ideal para descanso leve. Clique em Customizar e descreva como quer a sua customização!",
+    "imagem": "src/assets/image/pecas/customizados/rede1.jpg"
+  }
+]

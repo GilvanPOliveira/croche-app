@@ -1,0 +1,6 @@
+.app-main {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

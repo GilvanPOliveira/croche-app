@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nome": "Tapete Oval Reforçado",
+    "descricao": "Tapete oval de crochê com acabamento reforçado e bordas suaves.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante cru e rosa"],
+    "agulha": "5.0 mm",
+    "tipo": "Tapetes",
+    "tamanhos": {
+      "P": { "medidas": { "comprimento": 80, "largura": 50 }, "preco": "R$ 100,00" },
+      "M": { "medidas": { "comprimento": 90, "largura": 60 }, "preco": "R$ 110,00" },
+      "G": { "medidas": { "comprimento": 100, "largura": 70 }, "preco": "R$ 120,00" }
+    },
+    "observações": "Base antiderrapante opcional disponível sob encomenda.",
+    "imagem": "src/assets/image/pecas/decoracao/tapete1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Tapete Retangular Decorado",
+    "descricao": "Tapete retangular com bordas decoradas e trama reforçada.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante nº6"],
+    "agulha": "5.0 mm",
+    "tipo": "Tapetes",
+    "tamanhos": {
+      "P": { "medidas": { "comprimento": 90, "largura": 60 }, "preco": "R$ 110,00" },
+      "M": { "medidas": { "comprimento": 100, "largura": 70 }, "preco": "R$ 120,00" },
+      "G": { "medidas": { "comprimento": 110, "largura": 75 }, "preco": "R$ 130,00" }
+    },
+    "observações": "Ideal para corredores e entradas; resistente ao uso diário.",
+    "imagem": "src/assets/image/pecas/decoracao/tapete2.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Tapete Degradê Artesanal",
+    "descricao": "Tapete artesanal de crochê em tons degradê e toque macio.",
+    "categoria": "Decoração",
+    "linhas": ["Barbante mesclado"],
+    "agulha": "5.0 mm",
+    "tipo": "Tapetes",
+    "tamanhos": {
+      "P": { "medidas": { "comprimento": 90, "largura": 60 }, "preco": "R$ 110,00" },
+      "M": { "medidas": { "comprimento": 100, "largura": 70 }, "preco": "R$ 130,00" },
+      "G": { "medidas": { "comprimento": 110, "largura": 80 }, "preco": "R$ 140,00" }
+    },
+    "observações": "Cores mescladas criam efeito visual de transição.",
+    "imagem": "src/assets/image/pecas/decoracao/tapete3.jpg"
+  }
+]

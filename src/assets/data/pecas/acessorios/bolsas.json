@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "nome": "Bolsa Estruturada",
+    "descricao": "Bolsa de crochê estruturada com alças firmes e forro interno.",
+    "categoria": "Acessórios",
+    "linhas": ["Barbante cru", "Forro de algodão"],
+    "agulha": "4.0 mm",
+    "tipo": "Bolsas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "largura": 25, "altura": 20, "profundidade": 6 },
+        "preco": "R$ 85,00"
+      },
+      "M": {
+        "medidas": { "largura": 30, "altura": 25, "profundidade": 8 },
+        "preco": "R$ 95,00"
+      },
+      "G": {
+        "medidas": { "largura": 35, "altura": 28, "profundidade": 10 },
+        "preco": "R$ 105,00"
+      }
+    },
+    "observações": "Alça reforçada com forro interno costurado à mão.",
+    "imagem": "src/assets/image/pecas/acessorios/bolsa1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Bolsa com Fechamento Magnético",
+    "descricao": "Bolsa em crochê com fechamento magnético e forro interno.",
+    "categoria": "Acessórios",
+    "linhas": ["Barbante nº6", "Forro interno"],
+    "agulha": "4.0 mm",
+    "tipo": "Bolsas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "largura": 25, "altura": 18, "profundidade": 6 },
+        "preco": "R$ 85,00"
+      },
+      "M": {
+        "medidas": { "largura": 28, "altura": 22, "profundidade": 7 },
+        "preco": "R$ 90,00"
+      },
+      "G": {
+        "medidas": { "largura": 32, "altura": 25, "profundidade": 8 },
+        "preco": "R$ 100,00"
+      }
+    },
+    "observações": "Fecho magnético interno forrado em tecido de algodão.",
+    "imagem": "src/assets/image/pecas/acessorios/bolsa2.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Bolsa Redonda Boho",
+    "descricao": "Bolsa redonda de crochê, estilo boho chic com alça de couro sintético.",
+    "categoria": "Acessórios",
+    "linhas": ["Linha Barroco", "Alça de couro sintético"],
+    "agulha": "4.0 mm",
+    "tipo": "Bolsas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "diâmetro": 22, "profundidade": 5 },
+        "preco": "R$ 90,00"
+      },
+      "M": {
+        "medidas": { "diâmetro": 25, "profundidade": 6 },
+        "preco": "R$ 100,00"
+      },
+      "G": {
+        "medidas": { "diâmetro": 28, "profundidade": 7 },
+        "preco": "R$ 110,00"
+      }
+    },
+    "observações": "Alça de couro sintético removível e forro de brim.",
+    "imagem": "src/assets/image/pecas/acessorios/bolsa3.jpg"
+  },
+  {
+    "id": 4,
+    "nome": "Bolsa Moderna com Zíper",
+    "descricao": "Bolsa moderna em crochê com trama dupla e fechamento por zíper.",
+    "categoria": "Acessórios",
+    "linhas": ["Barbante colorido"],
+    "agulha": "4.0 mm",
+    "tipo": "Bolsas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "largura": 25, "altura": 18, "profundidade": 6 },
+        "preco": "R$ 90,00"
+      },
+      "M": {
+        "medidas": { "largura": 30, "altura": 20, "profundidade": 7 },
+        "preco": "R$ 98,00"
+      },
+      "G": {
+        "medidas": { "largura": 35, "altura": 22, "profundidade": 8 },
+        "preco": "R$ 105,00"
+      }
+    },
+    "observações": "Zíper metálico e base reforçada com dupla camada de barbante.",
+    "imagem": "src/assets/image/pecas/acessorios/bolsa4.jpg"
+  },
+  {
+    "id": 5,
+    "nome": "Bolsa Floral Retangular",
+    "descricao": "Bolsa retangular de crochê com detalhes florais delicados.",
+    "categoria": "Acessórios",
+    "linhas": ["Linha Anne"],
+    "agulha": "3.0 mm",
+    "tipo": "Bolsas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "largura": 28, "altura": 20, "profundidade": 6 },
+        "preco": "R$ 95,00"
+      },
+      "M": {
+        "medidas": { "largura": 32, "altura": 22, "profundidade": 7 },
+        "preco": "R$ 105,00"
+      },
+      "G": {
+        "medidas": { "largura": 36, "altura": 25, "profundidade": 8 },
+        "preco": "R$ 115,00"
+      }
+    },
+    "observações": "Forro interno costurado manualmente; bolso pequeno incluído.",
+    "imagem": "src/assets/image/pecas/acessorios/bolsa5.jpg"
+  },
+  {
+    "id": 6,
+    "nome": "Bolsa Ponto Puff",
+    "descricao": "Bolsa com acabamento em ponto puff e botão artesanal de madeira.",
+    "categoria": "Acessórios",
+    "linhas": ["Barbante nº6", "Botão artesanal"],
+    "agulha": "4.0 mm",
+    "tipo": "Bolsas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "largura": 25, "altura": 18, "profundidade": 6 },
+        "preco": "R$ 90,00"
+      },
+      "M": {
+        "medidas": { "largura": 28, "altura": 20, "profundidade": 7 },
+        "preco": "R$ 95,00"
+      },
+      "G": {
+        "medidas": { "largura": 32, "altura": 22, "profundidade": 8 },
+        "preco": "R$ 105,00"
+      }
+    },
+    "observações": "Botão de madeira tratado artesanalmente; não solta tinta.",
+    "imagem": "src/assets/image/pecas/acessorios/bolsa6.jpg"
+  },
+  {
+    "id": 7,
+    "nome": "Bolsa Saco com Cordão",
+    "descricao": "Bolsa estilo saco com fechamento de cordão ajustável.",
+    "categoria": "Acessórios",
+    "linhas": ["Barbante cru"],
+    "agulha": "4.0 mm",
+    "tipo": "Bolsas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "largura": 24, "altura": 25 },
+        "preco": "R$ 90,00"
+      },
+      "M": {
+        "medidas": { "largura": 26, "altura": 28 },
+        "preco": "R$ 100,00"
+      },
+      "G": {
+        "medidas": { "largura": 28, "altura": 30 },
+        "preco": "R$ 110,00"
+      }
+    },
+    "observações": "Cordão ajustável e base com reforço circular.",
+    "imagem": "src/assets/image/pecas/acessorios/bolsa7.jpg"
+  },
+  {
+    "id": 8,
+    "nome": "Bolsa Listrada Pastel",
+    "descricao": "Bolsa colorida com listras em tons pastéis e acabamento leve.",
+    "categoria": "Acessórios",
+    "linhas": ["Linha Charme"],
+    "agulha": "3.5 mm",
+    "tipo": "Bolsas",
+    "tamanhos": {
+      "P": {
+        "medidas": { "largura": 26, "altura": 18 },
+        "preco": "R$ 85,00"
+      },
+      "M": {
+        "medidas": { "largura": 30, "altura": 20 },
+        "preco": "R$ 90,00"
+      },
+      "G": {
+        "medidas": { "largura": 34, "altura": 22 },
+        "preco": "R$ 95,00"
+      }
+    },
+    "observações": "Listras coloridas harmonizadas manualmente; visual exclusivo.",
+    "imagem": "src/assets/image/pecas/acessorios/bolsa8.jpg"
+  },
+  {
+    "id": 9,
+    "nome": "Conjunto Bolsa e Necessaire",
+    "descricao": "Conjunto artesanal de bolsa e necessaire combinando.",
+    "categoria": "Acessórios",
+    "linhas": ["Linha de algodão", "Forro de tecido"],
+    "agulha": "3.5 mm",
+    "tipo": "Conjuntos",
+    "tamanhos": {
+      "P": {
+        "medidas": { "largura": 25, "altura": 18, "profundidade": 6 },
+        "preco": "R$ 140,00"
+      },
+      "M": {
+        "medidas": { "largura": 30, "altura": 22, "profundidade": 8 },
+        "preco": "R$ 150,00"
+      },
+      "G": {
+        "medidas": { "largura": 34, "altura": 25, "profundidade": 9 },
+        "preco": "R$ 160,00"
+      }
+    },
+    "observações": "Necessaire interna com zíper incluso; conjunto coordenado.",
+    "imagem": "src/assets/image/pecas/acessorios/bolsaConjunto1.jpg"
+  }
+]

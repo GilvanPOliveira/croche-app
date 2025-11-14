@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "nome": "Colar com Flor Central",
+    "descricao": "Colar artesanal de crochê com flor central e detalhe em miçangas.",
+    "categoria": "Acessórios",
+    "linhas": ["Linha fina", "Miçangas"],
+    "agulha": "1.5 mm",
+    "tipo": "Acessórios",
+    "tamanhos": {
+      "P": {
+        "medidas": { "comprimento": 40 },
+        "preco": "R$ 35,00"
+      },
+      "M": {
+        "medidas": { "comprimento": 45 },
+        "preco": "R$ 40,00"
+      },
+      "G": {
+        "medidas": { "comprimento": 50 },
+        "preco": "R$ 45,00"
+      }
+    },
+    "observações": "Fechamento com botão de crochê ajustável no pescoço.",
+    "imagem": "src/assets/image/pecas/acessorios/colar1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Colar Longo com Flor",
+    "descricao": "Colar longo em crochê com pingente de flor e caimento leve.",
+    "categoria": "Acessórios",
+    "linhas": ["Linha Charme"],
+    "agulha": "2.0 mm",
+    "tipo": "Acessórios",
+    "tamanhos": {
+      "P": {
+        "medidas": { "comprimento": 45 },
+        "preco": "R$ 35,00"
+      },
+      "M": {
+        "medidas": { "comprimento": 50 },
+        "preco": "R$ 38,00"
+      },
+      "G": {
+        "medidas": { "comprimento": 55 },
+        "preco": "R$ 42,00"
+      }
+    },
+    "observações": "Pode ser usado em dupla com colar curto ou gargantilha.",
+    "imagem": "src/assets/image/pecas/acessorios/colar2.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Colar Multicamadas",
+    "descricao": "Colar com múltiplas camadas de crochê colorido e visual vibrante.",
+    "categoria": "Acessórios",
+    "linhas": ["Linha mesclada"],
+    "agulha": "2.0 mm",
+    "tipo": "Acessórios",
+    "tamanhos": {
+      "P": {
+        "medidas": { "comprimento": 40 },
+        "preco": "R$ 40,00"
+      },
+      "M": {
+        "medidas": { "comprimento": 50 },
+        "preco": "R$ 45,00"
+      },
+      "G": {
+        "medidas": { "comprimento": 60 },
+        "preco": "R$ 50,00"
+      }
+    },
+    "observações": "Cores sortidas; cada peça é única.",
+    "imagem": "src/assets/image/pecas/acessorios/colar3.jpg"
+  }
+]

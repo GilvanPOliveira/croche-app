@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "nome": "Saída de Praia Rendada",
+    "descricao": "Saída de praia rendada com toque leve e caimento suave.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha Charme"],
+    "agulha": "3.0 mm",
+    "tipo": "Saída de praia",
+    "tamanhos": {
+      "P": {
+        "medidas": { "busto": 86, "cintura": 70, "quadril": 92, "comprimento": 85 },
+        "preco": "R$ 150,00"
+      },
+      "M": {
+        "medidas": { "busto": 94, "cintura": 78, "quadril": 100, "comprimento": 90 },
+        "preco": "R$ 160,00"
+      },
+      "G": {
+        "medidas": { "busto": 104, "cintura": 88, "quadril": 110, "comprimento": 95 },
+        "preco": "R$ 170,00"
+      }
+    },
+    "observações": "Modelagem soltinha; pode ser usada aberta ou com cinto.",
+    "imagem": "src/assets/image/pecas/vestuario/saidaPraia1.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Vestido Leve Artesanal",
+    "descricao": "Vestido de crochê leve e elegante com caimento natural.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha Anne"],
+    "agulha": "3.0 mm",
+    "tipo": "Vestidos",
+    "tamanhos": {
+      "P": { "medidas": { "busto": 84, "cintura": 66, "quadril": 90, "comprimento": 95 }, "preco": "R$ 170,00" },
+      "M": { "medidas": { "busto": 92, "cintura": 74, "quadril": 98, "comprimento": 100 }, "preco": "R$ 180,00" },
+      "G": { "medidas": { "busto": 102, "cintura": 84, "quadril": 108, "comprimento": 105 }, "preco": "R$ 190,00" }
+    },
+    "observações": "Ideal para eventos diurnos; leve e confortável.",
+    "imagem": "src/assets/image/pecas/vestuario/vestido1.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Vestido Longo Vazado",
+    "descricao": "Vestido longo de crochê com detalhe vazado e elegância natural.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha Charme"],
+    "agulha": "3.5 mm",
+    "tipo": "Vestidos",
+    "tamanhos": {
+      "P": { "medidas": { "busto": 86, "cintura": 68, "quadril": 92, "comprimento": 120 }, "preco": "R$ 180,00" },
+      "M": { "medidas": { "busto": 94, "cintura": 76, "quadril": 100, "comprimento": 125 }, "preco": "R$ 190,00" },
+      "G": { "medidas": { "busto": 104, "cintura": 86, "quadril": 110, "comprimento": 130 }, "preco": "R$ 200,00" }
+    },
+    "observações": "Possui transparência leve; usar com forro neutro.",
+    "imagem": "src/assets/image/pecas/vestuario/vestido2.jpg"
+  },
+  {
+    "id": 4,
+    "nome": "Vestido Curto Floral",
+    "descricao": "Vestido curto em crochê floral com forro leve e toque artesanal.",
+    "categoria": "Vestuário",
+    "linhas": ["Linha Anne", "Forro de algodão"],
+    "agulha": "3.0 mm",
+    "tipo": "Vestidos",
+    "tamanhos": {
+      "P": { "medidas": { "busto": 84, "cintura": 66, "quadril": 90, "comprimento": 85 }, "preco": "R$ 165,00" },
+      "M": { "medidas": { "busto": 92, "cintura": 74, "quadril": 98, "comprimento": 90 }, "preco": "R$ 175,00" },
+      "G": { "medidas": { "busto": 102, "cintura": 84, "quadril": 108, "comprimento": 95 }, "preco": "R$ 185,00" }
+    },
+    "observações": "Forro interno incluso; evita transparência e aumenta conforto.",
+    "imagem": "src/assets/image/pecas/vestuario/vestido3.jpg"
+  }
+]

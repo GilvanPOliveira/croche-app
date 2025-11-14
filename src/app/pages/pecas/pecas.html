@@ -1,0 +1,97 @@
+<section class="pecas">
+  <div class="container" *ngIf="pecasFiltradas.length > 0 && !erro">
+
+    <header class="topo-pecas">
+      <div class="titulo">
+        <h1>{{ categoriaSelecionada || 'Todas as Peças' }}</h1>
+
+        <small>
+          Exibindo
+          <strong>{{ pecasFiltradas.length }}</strong>
+          {{ pecasFiltradas.length === 1 ? 'peça' : 'peças' }}
+
+          <ng-container *ngIf="categoriaSelecionada">
+            na categoria <strong>{{ categoriaSelecionada }}</strong>
+          </ng-container>
+
+          <ng-container *ngIf="tipoSelecionado">
+            / tipo <strong>{{ tipoSelecionado }}</strong>
+          </ng-container>
+        </small>
+      </div>
+
+      <div class="acoes">
+        <button
+          class="btn-outline"
+          *ngIf="categoriaSelecionada || tipoSelecionado"
+          (click)="limparFiltro()"
+        >
+          Ver todas
+        </button>
+      </div>
+    </header>
+
+    <nav class="filtros">
+      <button
+        class="chip"
+        [class.active]="!categoriaSelecionada"
+        (click)="selecionarCategoria(null)"
+      >
+        Todas
+      </button>
+
+      <button
+        class="chip"
+        *ngFor="let c of categorias"
+        [class.active]="isAtiva(c)"
+        (click)="selecionarCategoria(c)"
+      >
+        {{ c }}
+      </button>
+    </nav>
+
+    <nav *ngIf="tiposDisponiveis.length > 0" class="subfiltros">
+      <button
+        class="chip"
+        *ngFor="let t of tiposDisponiveis"
+        [class.active]="isTipoAtivo(t)"
+        (click)="selecionarTipo(t)"
+      >
+        {{ t }}
+      </button>
+    </nav>
+
+    <div class="grid-pecas">
+      <article
+        *ngFor="let peca of pecasFiltradas"
+        class="peca"
+        tabindex="0"
+        role="button"
+        aria-label="Abrir detalhes de {{ peca.nome }}"
+        (click)="verDetalhes(peca)"
+        (keyup.enter)="verDetalhes(peca)"
+      >
+        <div class="thumb">
+          <img
+            [src]="peca.imagem"
+            [alt]="peca.nome"
+            loading="eager"
+            decoding="async"
+            (error)="peca.imagem = '/assets/image/imagem-404.png'"
+          />
+
+          <span class="badge">{{ peca.nome }}</span>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="loading" *ngIf="carregando && !erro">
+    <div class="skeleton card" *ngFor="let i of [].constructor(6)"></div>
+  </div>
+
+  <div class="erro" *ngIf="erro">
+    <p>Não foi possível carregar as peças no momento.</p>
+    <a routerLink="/" class="btn-voltar">Voltar ao início</a>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+[
+  {
+    "categoria": "Vestuário",
+    "tipos": [
+      { "nome": "Blusas", "arquivo": "vestuario/blusas.json" },
+      { "nome": "Vestidos", "arquivo": "vestuario/vestidos.json" },
+      { "nome": "Coletes", "arquivo": "vestuario/coletes.json" }
+    ]
+  },
+  {
+    "categoria": "Infantil",
+    "tipos": [
+      { "nome": "Bebê e Macacões", "arquivo": "infantil/infantil.json" }
+    ]
+  },
+  {
+    "categoria": "Decoração",
+    "tipos": [
+      { "nome": "Sousplats", "arquivo": "decoracao/sousplat.json" },
+      { "nome": "Tapetes", "arquivo": "decoracao/tapetes.json" },
+      { "nome": "Trilhos de Mesa", "arquivo": "decoracao/trilhoDeMesa.json" }
+    ]
+  },
+  {
+    "categoria": "Acessórios",
+    "tipos": [
+      { "nome": "Bandanas", "arquivo": "acessorios/bandanas.json" },
+      { "nome": "Bolsas", "arquivo": "acessorios/bolsas.json" },
+      { "nome": "Borboletas", "arquivo": "acessorios/borboletas.json" },
+      { "nome": "Brincos", "arquivo": "acessorios/brincos.json" },
+      { "nome": "Colares", "arquivo": "acessorios/colar.json" }
+    ]
+  },
+  {
+    "categoria": "Customizados",
+    "tipos": [
+      { "nome": "Customizados", "arquivo": "customizados/customizados.json" }
+    ]
+  }
+]

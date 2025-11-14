@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "titulo": "Flor de Crochê Básica",
+    "descricao": "Aprenda o ponto básico e crie flores delicadas em minutos.",
+    "imagem": "assets/image/aulas/flor-basica.jpg",
+    "preco": 25.00,
+    "acesso": false
+  },
+  {
+    "id": 2,
+    "titulo": "Toalha Circular Avançada",
+    "descricao": "Monte uma toalha de mesa circular com acabamento profissional.",
+    "imagem": "assets/image/aulas/toalha-circular.jpg",
+    "preco": 40.00,
+    "acesso": true
+  },
+  {
+    "id": 3,
+    "titulo": "Tapete de Crochê Geométrico",
+    "descricao": "Crie um tapete moderno com formas geométricas e cores vibrantes.",
+    "imagem": "assets/image/aulas/tapete-geometrico.jpg",
+    "preco": 35.00,
+    "acesso": false
+  },
+  {
+    "id": 4,
+    "titulo": "Blusa de Crochê para Iniciantes",
+    "descricao": "Aprenda a confeccionar uma blusa leve e estilosa passo a passo.",
+    "imagem": "assets/image/aulas/blusa-iniciantes.jpg",
+    "preco": 45.00,
+    "acesso": true
+  },
+  {
+    "id": 5,
+    "titulo": "Sousplat Elegante",
+    "descricao": "Monte sousplats sofisticados para compor mesas decoradas.",
+    "imagem": "assets/image/aulas/sousplat-elegante.jpg",
+    "preco": 30.00,
+    "acesso": false
+  },
+  {
+    "id": 6,
+    "titulo": "Amigurumi de Ursinho",
+    "descricao": "Descubra como crochetar um ursinho fofo e cheio de detalhes.",
+    "imagem": "assets/image/aulas/amigurumi-ursinho.jpg",
+    "preco": 50.00,
+    "acesso": true
+  }
+]
+

@@ -1,0 +1,115 @@
+<section class="encomendas">
+  <div class="container">
+    <h1>
+      <i class="fa-solid fa-bag-shopping"></i>
+      Minhas Encomendas
+    </h1>
+
+    <div *ngIf="itens.length === 0" class="vazio">
+      <p>Nenhuma peça adicionada ainda.</p>
+
+      <div class="links-vazio">
+        <a routerLink="/pecas" class="btn">
+          <i class="fa-solid fa-border-all"></i> Ver Peças
+        </a>
+        <a routerLink="/customizar" class="btn-outline">
+          <i class="fa-solid fa-pen-ruler"></i> Criar Customização
+        </a>
+        <a routerLink="/aulas" class="btn">
+          <i class="fa-solid fa-chalkboard-user"></i> Ver Aulas
+        </a>
+      </div>
+    </div>
+
+    <div *ngIf="itens.length > 0" class="lista-encomendas">
+      <ul>
+        <li *ngFor="let item of itens" class="item-encomenda">
+          <div class="topo-item">
+            <img [src]="item.imagem.startsWith('/assets/') ? item.imagem : 'assets/image/pecas/' + item.imagem" [alt]="item.nome || 'Peça'" class="thumb" (error)="ocultarImagem($event)" />
+
+            <div class="detalhes">
+              <h3>{{ item.nome }}</h3>
+
+              <p class="preco">
+                <i class="fa-solid fa-tag"></i> {{ item.preco }}
+              </p>
+
+              <p class="quantidade">
+                <i class="fa-solid fa-hashtag"></i>
+                Quantidade: {{ item.quantidade }}
+              </p>
+
+              <div class="acoes-item">
+                <div class="botoes-qtd">
+                  <button class="btn-qtd" (click)="aumentar(item.id)">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                  <button class="btn-qtd" (click)="diminuir(item.id)">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                </div>
+
+                <button class="btn-remover" (click)="remover(item.id)">
+                  <i class="fa-solid fa-trash"></i> Remover
+                </button>
+              </div>
+
+              <button class="btn-outline btn-custom" (click)="abrirCustomizacao(item)" title="Customizar esta peça">
+                <i class="fa-solid fa-pen-ruler"></i> Customizar
+              </button>
+            </div>
+          </div>
+
+          <div *ngIf="item.customizacao" class="resumo-customizacao interno">
+            <h4><i class="fa-solid fa-palette"></i> Customização</h4>
+
+            <div *ngIf="temCoresSelecionadas(item.customizacao)" class="linhas-resumo">
+              <h5><i class="fa-solid fa-palette"></i> Linhas</h5>
+              <div *ngFor="let linha of asKeyValue(item.customizacao.coresSelecionadas)" class="linha-bloco">
+                <strong>{{ linha.key }}:</strong>
+                <div class="cores-selecionadas">
+                  <span *ngFor="let cor of (linha.value || [])" class="cor-mini" [title]="cor.nome || ''">
+                    <img [src]="cor.imagem || 'assets/image/imagem-404.png'" [alt]="cor.nome || 'Cor'" (error)="ocultarImagem($event)" />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div *ngIf="temMedidas(item.customizacao)" class="medidas-resumo">
+              <h5><i class="fa-solid fa-ruler"></i> Medidas</h5>
+              <ul>
+                <ng-container *ngFor="let campo of asKeyValue(item.customizacao.medidas)">
+                  <li *ngIf="campo.value && campo.value.toString().trim() !== ''">
+                    <strong>{{ formatKey(campo.key) }}:</strong> {{ campo.value }} cm
+                  </li>
+                </ng-container>
+              </ul>
+            </div>
+
+            <div *ngIf="temObservacoes(item.customizacao)" class="obs-resumo">
+              <h5><i class="fa-solid fa-note-sticky"></i> Observações</h5>
+              <p>{{ item.customizacao.observacoes }}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="resumo">
+        <h3>
+          <i class="fa-solid fa-sack-dollar"></i>
+          Total: <span>{{ total }}</span>
+        </h3>
+
+        <div class="acoes">
+          <button class="btn" (click)="voltar()">
+            Voltar para Peça
+          </button>
+
+          <button class="btn-outline" (click)="limpar()">
+            <i class="fa-solid fa-trash-can"></i> Esvaziar encomendas
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

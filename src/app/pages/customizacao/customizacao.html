@@ -1,0 +1,194 @@
+<section class="customizacao" *ngIf="!carregando && !erro">
+  <div class="container">
+
+    <h1 *ngIf="peca; else tituloGenerico">
+      Customização da peça: {{ peca.nome }}
+    </h1>
+
+    <ng-template #tituloGenerico>
+      <h1>Customização da Peça</h1>
+    </ng-template>
+
+    <div class="topo">
+      <div class="imagem">
+        <img [src]="imagemExibida" alt="Imagem da Peça" (error)="onImageError($event)" />
+      </div>
+
+      <div class="medidas-bloco">
+
+        <div class="secao-tamanhos" *ngIf="peca">
+          <h2>Escolha o tamanho</h2>
+
+          <div class="tamanho-opcoes">
+            <button
+              *ngFor="let t of (peca.tamanhos | keyvalue)"
+              class="tamanho"
+              [class.ativo]="t.key === tamanhoSelecionado"
+              (click)="selecionarTamanho(t.key)"
+            >
+              {{ t.key }}
+            </button>
+          </div>
+        </div>
+
+        <div class="secao-medidas">
+          <h3>Medidas do tamanho {{ tamanhoSelecionado }}</h3>
+
+          <div class="grid-medidas-form">
+            <label *ngFor="let campo of camposMedidas" class="campo-medida">
+              {{ campo.label }} ({{ campo.unidade }})
+
+              <input
+                type="number"
+                step="0.1"
+                [(ngModel)]="medidas[campo.key]"
+                [name]="campo.key"
+                placeholder="0,0"
+              />
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="fabricantes">
+      <h3>Selecione o fabricante</h3>
+
+      <div class="fabricantes-grid">
+        <div
+          *ngFor="let f of fabricantes"
+          class="fabricante-card"
+          [class.ativo]="fabricanteSelecionado === f.slug"
+          (click)="selecionarFabricante(f.slug)"
+        >
+          <img
+            [src]="'/assets/image/logo/' + f.slug + '.png'"
+            [alt]="f.nome"
+            (error)="ocultarImagem($event)"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="linhas" *ngIf="linhasDisponiveis.length">
+      <h3>Selecione a linha</h3>
+
+      <div class="linhas-grid">
+        <div
+          *ngFor="let l of linhasDisponiveis"
+          class="linha-card"
+          [class.ativo]="linhaSelecionada === l"
+          (click)="selecionarLinha(l)"
+        >
+          {{ l }}
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="linhaDetalhe" class="linha-detalhe">
+
+      <h3 class="toggle-title" (click)="toggleCores = !toggleCores">
+        Cores disponíveis — {{ linhaDetalhe.nome }}
+        <i class="fa-solid"
+           [class.fa-chevron-down]="toggleCores"
+           [class.fa-chevron-up]="!toggleCores">
+        </i>
+      </h3>
+
+      <div *ngIf="toggleCores">
+        <div class="cores-grid">
+          <div
+            *ngFor="let cor of (linhaDetalhe?.cores || [])"
+            class="cor-item"
+            [class.selecionada]="ehCorSelecionada(cor)"
+            (click)="toggleCor(cor)"
+            [title]="cor.nome"
+          >
+            <img
+              [src]="cor.imagem"
+              [alt]="cor.nome"
+              class="cor-preview"
+              (error)="ocultarImagem($event)"
+            />
+            <span>{{ cor.codigo }}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="linhas-escolhidas">
+      <h3>Linhas escolhidas</h3>
+
+      <div *ngIf="linhasComSelecao.length; else semSelecoes" class="painel-selecoes">
+
+        <div *ngFor="let linha of linhasComSelecao" class="linha-salva">
+
+          <div class="cabecalho-linha">
+            <strong>{{ linha }}</strong>
+
+            <button class="btn-limpar-tag" (click)="limparLinha(linha)">
+              🗑 Limpar
+            </button>
+          </div>
+
+          <div class="lista-cores">
+            <span
+              *ngFor="let cor of (selecaoPorLinha[linha] || [])"
+              class="tag-cor"
+              [title]="cor.nome"
+              (click)="limparCor(linha, cor)"
+            >
+              <img [src]="cor.imagem" [alt]="cor.nome" class="mini-cor" />
+              {{ cor.nome }}
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <ng-template #semSelecoes>
+        <p class="texto-suave">Nenhuma cor selecionada ainda.</p>
+      </ng-template>
+    </div>
+
+    <div class="obs">
+      <h3>Observações adicionais</h3>
+
+      <textarea
+        [(ngModel)]="observacoes"
+        rows="4"
+        maxlength="1500"
+        placeholder="Informe detalhes, ajustes ou preferências..."
+        (input)="limitarObservacoes()"
+        (paste)="bloquearColagem($event)"
+      ></textarea>
+
+      <div class="contador" [class.limite]="observacoes.length >= 1500">
+        {{ observacoes.length }}/1500 caracteres
+      </div>
+    </div>
+
+    <div class="acoes">
+      <button class="btn" (click)="salvarCustomizacao()">
+        <i class="fa-solid fa-floppy-disk"></i> Salvar customização
+      </button>
+
+      <button class="btn-outline" (click)="voltar()">
+        <i class="fa-solid fa-arrow-left"></i> Voltar
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section *ngIf="carregando" class="loading">
+  <p>Carregando customização...</p>
+</section>
+
+<section *ngIf="erro && !carregando" class="erro">
+  <h2>Não foi possível carregar os dados da customização.</h2>
+  <a routerLink="/pecas" class="btn-outline">Voltar para as peças</a>
+</section>
