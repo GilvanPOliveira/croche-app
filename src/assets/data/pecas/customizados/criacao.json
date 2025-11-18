@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "nome": "Crie sua própria peça",
+    "slug": "crie-sua-propria-peca",
+    "descricao": "Desenvolva uma peça totalmente personalizada, escolhendo cada detalhe: medidas, linhas, cores e estilo.",
+    "categoria": "Criação",
+    "linhas": [
+      "Linha 100% algodão",
+      "Linha Charme",
+      "Linha Anne"
+    ],
+    "agulha": "Variável",
+    "tipo": "customizado",
+
+    "tamanhos": {
+      "Único": {
+        "medidas": {},
+        "preco": "Sob consulta"
+      }
+    },
+
+    "medidasDisponiveis": {
+      "busto": null,
+      "cintura": null,
+      "quadril": null,
+      "largura": null,
+      "altura": null,
+      "comprimento": null,
+      "manga": null,
+      "ombro": null,
+      "punho": null,
+      "torax": null,
+      "cavas": null,
+      "pescoco": null,
+      "barra": null,
+      "circunferencia": null,
+      "profundidade": null,
+      "comprimento_total": null,
+      "largura_total": null,
+      "personalizado_1": null,
+      "personalizado_2": null,
+      "personalizado_3": null
+    },
+
+    "observacoes": "Informe no formulário como deseja que sua peça seja criada. Quanto mais detalhes, melhor.",
+
+    "imagem": "/assets/image/imagem-404.jpg",
+    "arquivo": "customizados/criacao.json"
+  }
+]

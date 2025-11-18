@@ -147,7 +147,7 @@ export class Customizacao implements OnInit {
       this.camposMedidas = campos || [];
 
       this.medidas = {
-        ...this.medidasTamanhoSelecionado
+        ...this.medidasTamanhoSelecionado,
       };
     });
 
@@ -159,7 +159,7 @@ export class Customizacao implements OnInit {
     this.atualizarMedidasTamanho();
 
     this.medidas = {
-      ...this.medidasTamanhoSelecionado
+      ...this.medidasTamanhoSelecionado,
     };
   }
 
@@ -182,10 +182,12 @@ export class Customizacao implements OnInit {
     this.linhaSelecionada = linha;
     this.linhaDetalhe = null;
 
-    this.linhasService.getLinha(this.fabricanteSelecionado, linha).subscribe((detalhe) => {
-      this.linhaDetalhe = detalhe;
-      if (!this.selecaoPorLinha[linha]) this.selecaoPorLinha[linha] = [];
-    });
+    this.linhasService
+      .getLinha(this.fabricanteSelecionado, linha)
+      .subscribe((detalhe) => {
+        this.linhaDetalhe = detalhe;
+        if (!this.selecaoPorLinha[linha]) this.selecaoPorLinha[linha] = [];
+      });
   }
 
   get coresSelecionadas(): Cor[] {
@@ -206,7 +208,6 @@ export class Customizacao implements OnInit {
     const lista = this.selecaoPorLinha[this.linhaSelecionada] || [];
     return lista.some((c) => c.codigo === cor.codigo);
   }
-
 
   limparLinha(linha: string) {
     delete this.selecaoPorLinha[linha];
@@ -234,7 +235,6 @@ export class Customizacao implements OnInit {
       imagem: this.imagemExibida,
       preco: this.peca.tamanhos?.[tamanho]?.preco || 'Sob consulta',
       tipo: this.peca.tipo,
-
       medidas: this.medidas,
       customizacao: {
         tamanho,
@@ -248,12 +248,26 @@ export class Customizacao implements OnInit {
 
     this.encomendasService.salvarCustomizacao(null, dados);
     this.notificacao.notificar('Customização salva com sucesso!');
-    this.router.navigate(['/encomendas']);
+
+    // 🔥 agora preserva a origem corretamente
+    this.router.navigate(['/encomendas'], {
+      state: {
+        from: history.state?.from || null
+      }
+    });
   }
 
   voltar() {
+    const from = history.state?.from;
+
+    if (from) {
+      this.router.navigateByUrl(from);
+      return;
+    }
+
     this.location.back();
   }
+
 
   ocultarImagem(event: Event) {
     (event.target as HTMLImageElement).src = this.imagemPadrao;

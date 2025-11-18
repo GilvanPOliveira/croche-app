@@ -1,13 +1,14 @@
 <section class="peca-detalhe" *ngIf="!carregando && !erro && peca as p">
   <div class="container">
 
+    <!-- NAV SUPERIOR -->
     <nav class="navegacao-topo">
       <button class="btn-outline" (click)="irParaAnterior()" [disabled]="indiceAtual === 0">
         <i class="fa-solid fa-chevron-left"></i> Anterior
       </button>
 
       <button class="btn" (click)="voltar()">
-        Ver todas as peças
+        <i class="fa-solid fa-arrow-left"></i> Voltar
       </button>
 
       <button class="btn-outline" (click)="irParaProxima()" [disabled]="indiceAtual === pecasLista.length - 1">
@@ -15,39 +16,51 @@
       </button>
     </nav>
 
+    <!-- CARD PRINCIPAL -->
     <article class="peca-card">
       <div class="peca-conteudo">
 
+        <!-- IMAGEM -->
         <figure class="peca-imagem">
-          <img [src]="p.imagem" [alt]="'Imagem da peça ' + p.nome" class="peca-img" (error)="onImageError($event)" />
+          <img
+            class="peca-img fade-in"
+            [src]="imagemAtual"
+            [alt]="'Imagem da peça ' + p.nome"
+            (error)="onImageError($event)"
+            loading="eager"
+            fetchpriority="high"
+          />
         </figure>
 
+        <!-- INFO -->
         <div class="peca-info card-infos">
 
           <h1>{{ p.nome }}</h1>
 
           <p class="descricao" *ngIf="p.descricao">{{ p.descricao }}</p>
 
+          <!-- Materiais -->
           <div *ngIf="p.linhas.length || p.agulha">
             <h2 class="subtitulo">Materiais e ferramentas</h2>
-
             <ul>
               <li *ngFor="let linha of p.linhas">
                 <strong>Linha:</strong> {{ linha }}
               </li>
-
               <li *ngIf="p.agulha">
                 <strong>Agulha:</strong> {{ p.agulha }}
               </li>
             </ul>
           </div>
 
+          <!-- Tamanhos -->
           <div *ngIf="p.tamanhos && (p.tamanhos | keyvalue).length">
-
             <h2 class="subtitulo">Tamanhos disponíveis</h2>
 
             <div class="info-tamanho">
-              <p><strong>Tamanho selecionado:</strong> {{ tamanhoSelecionado }}</p>
+              <p>
+                <strong>Tamanho selecionado:</strong>
+                {{ tamanhoSelecionado }}
+              </p>
             </div>
 
             <table class="tabela-tamanhos">
@@ -60,7 +73,11 @@
               </thead>
 
               <tbody>
-                <tr *ngFor="let t of (p.tamanhos | keyvalue: ordenarTamanhos)" [class.selecionado]="t.key === tamanhoSelecionado" (click)="selecionarTamanho(t.key)">
+                <tr
+                  *ngFor="let t of (p.tamanhos | keyvalue: ordenarTamanhos)"
+                  [class.selecionado]="t.key === tamanhoSelecionado"
+                  (click)="selecionarTamanho(t.key)"
+                >
                   <td>{{ t.key }}</td>
 
                   <td>
@@ -69,12 +86,10 @@
                         {{ m.key }}: {{ m.value }}<span *ngIf="!last">, </span>
                       </ng-container>
                     </ng-container>
-
                     <ng-template #semMedidas>—</ng-template>
                   </td>
 
                   <td>{{ t.value.preco || 'Sob consulta' }}</td>
-
                 </tr>
               </tbody>
             </table>
@@ -84,6 +99,7 @@
             <strong>Observações:</strong> {{ p.observacoes }}
           </p>
 
+          <!-- BOTÕES AÇÃO -->
           <div class="acoes">
             <button class="btn" (click)="adicionarEncomenda()">
               <i class="fa-solid fa-bag-shopping"></i>
@@ -103,16 +119,18 @@
   </div>
 </section>
 
+<!-- LOADING -->
 <section *ngIf="carregando" class="loading-detalhe">
   <div class="container">
     <p>Carregando peça...</p>
   </div>
 </section>
 
+<!-- ERRO -->
 <section *ngIf="erro" class="erro-detalhe">
   <div class="container">
     <h2>Peça não encontrada</h2>
     <p>A peça solicitada não foi localizada.</p>
-    <a routerLink="/pecas" class="btn-voltar">Voltar às peças</a>
+    <a routerLink="/pecas" class="btn-outline">Voltar às peças</a>
   </div>
 </section>

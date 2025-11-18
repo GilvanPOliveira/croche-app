@@ -1,10 +1,12 @@
 <section class="encomendas">
   <div class="container">
+
     <h1>
       <i class="fa-solid fa-bag-shopping"></i>
       Minhas Encomendas
     </h1>
 
+    <!-- ESTADO VAZIO -->
     <div *ngIf="itens.length === 0" class="vazio">
       <p>Nenhuma peça adicionada ainda.</p>
 
@@ -21,11 +23,19 @@
       </div>
     </div>
 
+    <!-- LISTA DE ENCOMENDAS -->
     <div *ngIf="itens.length > 0" class="lista-encomendas">
       <ul>
         <li *ngFor="let item of itens" class="item-encomenda">
+
+          <!-- CARD DO ITEM -->
           <div class="topo-item">
-            <img [src]="item.imagem.startsWith('/assets/') ? item.imagem : 'assets/image/pecas/' + item.imagem" [alt]="item.nome || 'Peça'" class="thumb" (error)="ocultarImagem($event)" />
+            <img
+              [src]="item.imagem.startsWith('/assets/') ? item.imagem : 'assets/image/pecas/' + item.imagem"
+              [alt]="item.nome"
+              class="thumb"
+              (error)="ocultarImagem($event)"
+            />
 
             <div class="detalhes">
               <h3>{{ item.nome }}</h3>
@@ -54,38 +64,62 @@
                 </button>
               </div>
 
-              <button class="btn-outline btn-custom" (click)="abrirCustomizacao(item)" title="Customizar esta peça">
+              <button
+                class="btn-outline btn-custom"
+                (click)="abrirCustomizacao(item)"
+                title="Customizar esta peça"
+              >
                 <i class="fa-solid fa-pen-ruler"></i> Customizar
               </button>
             </div>
           </div>
 
-          <div *ngIf="item.customizacao" class="resumo-customizacao interno">
-            <h4><i class="fa-solid fa-palette"></i> Customização</h4>
+          <!-- RESUMO DA CUSTOMIZAÇÃO -->
+          <div *ngIf="item.customizacao" class="resumo-customizacao">
+            <h4>
+              <i class="fa-solid fa-palette"></i> Customização
+            </h4>
 
+            <!-- Cores -->
             <div *ngIf="temCoresSelecionadas(item.customizacao)" class="linhas-resumo">
               <h5><i class="fa-solid fa-palette"></i> Linhas</h5>
-              <div *ngFor="let linha of asKeyValue(item.customizacao.coresSelecionadas)" class="linha-bloco">
+
+              <div
+                *ngFor="let linha of asKeyValue(item.customizacao.coresSelecionadas)"
+                class="linha-bloco"
+              >
                 <strong>{{ linha.key }}:</strong>
+
                 <div class="cores-selecionadas">
-                  <span *ngFor="let cor of (linha.value || [])" class="cor-mini" [title]="cor.nome || ''">
-                    <img [src]="cor.imagem || 'assets/image/imagem-404.png'" [alt]="cor.nome || 'Cor'" (error)="ocultarImagem($event)" />
+                  <span
+                    *ngFor="let cor of (linha.value || [])"
+                    class="cor-mini"
+                    [title]="cor.nome"
+                  >
+                    <img
+                      [src]="cor.imagem"
+                      [alt]="cor.nome"
+                      (error)="ocultarImagem($event)"
+                    />
                   </span>
                 </div>
               </div>
             </div>
 
+            <!-- Medidas -->
             <div *ngIf="temMedidas(item.customizacao)" class="medidas-resumo">
               <h5><i class="fa-solid fa-ruler"></i> Medidas</h5>
+
               <ul>
                 <ng-container *ngFor="let campo of asKeyValue(item.customizacao.medidas)">
-                  <li *ngIf="campo.value && campo.value.toString().trim() !== ''">
+                  <li *ngIf="campo.value">
                     <strong>{{ formatKey(campo.key) }}:</strong> {{ campo.value }} cm
                   </li>
                 </ng-container>
               </ul>
             </div>
 
+            <!-- Observações -->
             <div *ngIf="temObservacoes(item.customizacao)" class="obs-resumo">
               <h5><i class="fa-solid fa-note-sticky"></i> Observações</h5>
               <p>{{ item.customizacao.observacoes }}</p>
@@ -94,15 +128,16 @@
         </li>
       </ul>
 
+      <!-- RESUMO GERAL -->
       <div class="resumo">
         <h3>
           <i class="fa-solid fa-sack-dollar"></i>
           Total: <span>{{ total }}</span>
         </h3>
 
-        <div class="acoes">
+        <div class="acoes-resumo">
           <button class="btn" (click)="voltar()">
-            Voltar para Peça
+            <i class="fa-solid fa-arrow-left"></i> Voltar
           </button>
 
           <button class="btn-outline" (click)="limpar()">
@@ -110,6 +145,7 @@
           </button>
         </div>
       </div>
+
     </div>
   </div>
 </section>

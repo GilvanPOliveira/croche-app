@@ -8,19 +8,28 @@ export const routes: Routes = [
   },
   {
     path: 'pecas',
-    loadComponent: () => import('./pages/pecas/pecas').then(m => m.Pecas),
+    loadComponent: () =>
+      import('./pages/pecas/pecas').then((m) => m.Pecas),
     title: 'Vane Alves - Peças'
   },
   {
     path: 'pecas/:folder/:file/:slug/:id',
     loadComponent: () =>
-      import('./pages/pecas/peca-detalhe/peca-detalhe').then(m => m.PecaDetalhe),
+      import('./pages/pecas/peca-detalhe/peca-detalhe').then((m) => m.PecaDetalhe),
     title: 'Peça em Crochê | Vane Alves'
   },
   {
+    // nova rota para customização a partir de uma encomenda
+    path: 'customizar',
+    loadComponent: () =>
+      import('./pages/customizacao/customizacao').then((m) => m.Customizacao),
+    title: 'Customização | Vane Alves'
+  },
+  {
+    // rota para customização a partir de uma peça específica (detalhe)
     path: 'customizacao/:folder/:file/:slug/:id',
     loadComponent: () =>
-      import('./pages/customizacao/customizacao').then(m => m.Customizacao),
+      import('./pages/customizacao/customizacao').then((m) => m.Customizacao),
     title: 'Customização | Vane Alves'
   },
   {
@@ -30,25 +39,25 @@ export const routes: Routes = [
   {
     path: 'encomendas',
     loadComponent: () =>
-      import('./pages/encomendas/encomendas').then(m => m.Encomendas),
+      import('./pages/encomendas/encomendas').then((m) => m.Encomendas),
     title: 'Vane Alves - Encomendas'
   },
   {
     path: 'aulas',
     loadComponent: () =>
-      import('./pages/aulas/aulas').then(m => m.Aulas),
+      import('./pages/aulas/aulas').then((m) => m.Aulas),
     title: 'Vane Alves - Aulas'
   },
   {
     path: 'contato',
     loadComponent: () =>
-      import('./pages/contato/contato').then(m => m.Contato),
+      import('./pages/contato/contato').then((m) => m.Contato),
     title: 'Vane Alves - Contato'
   },
   {
     path: '**',
     loadComponent: () =>
-      import('./pages/nao-encontrada/nao-encontrada').then(m => m.NaoEncontrada),
+      import('./pages/nao-encontrada/nao-encontrada').then((m) => m.NaoEncontrada),
     title: 'Página não encontrada'
   },
 ];

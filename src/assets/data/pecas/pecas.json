@@ -36,5 +36,11 @@
     "tipos": [
       { "nome": "Customizados", "arquivo": "customizados/customizados.json" }
     ]
-  }
+  },
+{
+  "categoria": "Criação",
+  "tipos": [
+    { "nome": "Criação", "arquivo": "customizados/criacao.json" }
+  ]
+}
 ]

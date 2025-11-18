@@ -22,10 +22,10 @@ export class Encomendas implements OnInit, OnDestroy {
     private notificacao: NotificacaoService,
     private router: Router,
     private location: Location
-  ) { }
+  ) {}
 
   ngOnInit(): void {
-    this.sub = this.encomendasService.carrinho$.subscribe((itens) => {
+    this.sub = this.encomendasService.carrinho$.subscribe(itens => {
       this.itens = itens;
     });
   }
@@ -99,8 +99,7 @@ export class Encomendas implements OnInit, OnDestroy {
     this.location.back();
   }
 
-  formatKey(key: string | unknown): string {
-    const safeKey = typeof key === 'string' ? key : '';
-    return safeKey.replace(/_/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase());
+  formatKey(key: string): string {
+    return key.replace(/_/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase());
   }
 }

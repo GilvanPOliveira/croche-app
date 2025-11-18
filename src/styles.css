@@ -1,58 +1,68 @@
-/* VANE ALVES CROCHÊ - #VaCrochetando */
+/* ----------------------------------------------------------
+   VANE ALVES CROCHÊ — DESIGN SYSTEM (Craft Elegante)
+   Base global, tipografia, botões, containers, cards, grids
+   ---------------------------------------------------------- */
+
+/* =========================================
+   🎨 VARIÁVEIS GLOBAIS
+   ========================================= */
 :root {
-   
-  /* Paleta principal */
+  /* Paleta primária */
   --color-primary: #E17B6A;
+  --color-primary-dark: #C16254;
   --color-secondary: #F4AFA3;
   --color-accent: #C49C6C;
 
-  /* Tons neutros / texto */
+  /* Tons neutros */
   --color-text: #5A2E2E;
+  --color-text-light: #6d4a4a;
   --color-dark: #333;
   --color-mid: #444;
   --color-span: #555;
-  --color-border: #ccc;
-  --color-border-light: #ddd;
 
-  /* Tons claros de fundo / painel */
+  /* Bordas e divisores */
+  --color-border: #d8c3c3;
+  --color-border-light: #e8dada;
+
+  /* Planos de fundo */
   --color-bg: #FFF9F5;
   --color-panel: #F9E6D7;
-  --color-panel-alt: #fff8f8;
-  --color-panel-soft: #fff7f7;
-  --color-panel-light: #fff9f9;
-  --color-panel-muted: #f1dcdc;
+  --color-panel-alt: #fff1ec;
+  --color-panel-soft: #fff7f6;
 
-  /* Tons rosados / de contraste suave */
-  --color-soft-border: #f0dede;
-  --color-soft-line: #f3dcdc;
-  --color-soft-shadow: #e5d2d2;
-  --color-soft-alt: #e6cccc;
-
-  /* Cores de alerta e erro */
+  /* Alertas */
   --color-error: #b30000;
-  --color-error-bright: #ff0000;
-  --color-error-bg: #fff3f3;
+  --color-success: #28a745;
 
-  /* Tons neutros */
-  --color-white: #fff;
-
-  /* Mídias Sociais */ 
+  /* Social */
   --color-instagram: #E1306C;
   --color-whatsapp: #25D366;
   --color-youtube: #ff4444;
 
-  /* Espaçamentos e bordas */
-  --radius-lg: 16px;
-  --radius-md: 8px;
-  --radius-sm: 4px;
+  /* Radius (MÉDIO) — Craft Elegante */
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+
+  /* Sombras */
   --shadow-soft: 0 4px 10px rgba(90, 46, 46, 0.1);
+  --shadow-hover: 0 6px 15px rgba(90, 46, 46, 0.15);
 
   /* Tipografia */
-  --font-primary: 'Poppins', 'Segoe UI', sans-serif;
+  --font-primary: 'Poppins', sans-serif;
   --font-script: 'Dancing Script', cursive;
+
+  /* Espaçamentos */
+  --space-xs: .4rem;
+  --space-sm: .8rem;
+  --space-md: 1.2rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
 }
 
-/* RESET GERAL */
+/* =========================================
+   🔄 RESET GLOBAL
+   ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -60,83 +70,36 @@
 }
 
 html, body {
-  height: 100%;
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  min-height: 100%;
+  background: var(--color-bg);
   font-family: var(--font-primary);
+  color: var(--color-text);
   scroll-behavior: smooth;
 }
 
-/* CABEÇALHOS E TEXTOS */
-h1, h2, h3 {
-  color: var(--color-text);
+/* =========================================
+   📝 TIPOGRAFIA
+   ========================================= */
+h1, h2, h3, h4 {
   font-family: var(--font-script);
-  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1.2;
 }
 
-p, a, li, span {
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.3rem; }
+
+p, span, li, a {
   font-size: 1rem;
   line-height: 1.6;
+  color: var(--color-text);
 }
 
-/* LINKS E BOTÕES */
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-.btn {
-  border: 2px solid transparent;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  display: inline-block;
-  font-family: var(--font-primary);
-  font-weight: 600;
-  text-align: center;
-  border-radius: var(--radius-md);
-  padding: 1rem 1.4rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.btn-outline {
-  display: inline-block;
-  font-family: var(--font-primary);
-  font-weight: 600;
-  text-align: center;
-  border-radius: var(--radius-md);
-  padding: 0.69rem 1.4rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.btn:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-  background-color: transparent;
-}
-
-.btn:hover {
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
-  background-color: transparent;
-}
-
-.btn-outline {
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
-  background-color: transparent;
-}
-
-.btn-outline:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-
-/* CONTAINERS E SEÇÕES */
+/* =========================================
+   📦 CONTAINERS E SEÇÕES
+   ========================================= */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -144,52 +107,176 @@ li {
 }
 
 .section {
-  padding: 4rem 0;
-  background-color: var(--color-panel);
+  background: var(--color-panel);
   border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-lg);
   box-shadow: var(--shadow-soft);
-  margin-bottom: 2rem;
+  margin: var(--space-lg) auto;
 }
 
-/* RODAPÉ */
-footer {
-  background-color: var(--color-primary);
-  color: white;
-  text-align: center;
-  padding: 1.5rem 0;
-  font-family: var(--font-script);
-  font-size: 1.2rem;
+/* =========================================
+   🧱 CARDS PADRÃO
+   ========================================= */
+.card {
+  background: var(--color-panel-soft);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: var(--space-md);
+  transition: all .3s ease;
 }
 
-/* IMAGENS */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* =========================================
+   🧵 IMAGENS
+   ========================================= */
 img {
   max-width: 100%;
-  height: auto;
   display: block;
   border-radius: var(--radius-md);
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* =========================================
+   🔘 BOTÕES PADRÃO (Craft Elegante)
+   ========================================= */
 
-/* SNACK BAR */
-.mat-mdc-snack-bar-container {
-  background-color: var(--color-primary);
-  color: #fff;
-  font-weight: 500;
-}
-
-.mat-mdc-snack-bar-action {
-  color: #fff;
-  font-weight: bold;
-}
-
-.mat-mdc-snack-bar-container .mdc-snackbar__label {
-  display: flex;
+.btn,
+.btn-outline,
+.btn-light,
+.btn-danger,
+.btn-icon {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: .5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--radius-md);
+  padding: .75rem 1.4rem;
+  cursor: pointer;
+  transition: all .25s ease;
+  text-decoration: none;
 }
 
-.mat-mdc-snack-bar-container .mdc-snackbar__label::before {
-  font-size: 1.2rem;
+/* Principal */
+.btn {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border: 2px solid var(--color-primary);
 }
+
+.btn:hover {
+  background: var(--color-panel);
+  color: var(--color-primary);
+}
+
+/* Contorno */
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+/* Claro */
+.btn-light {
+  background: var(--color-panel);
+  color: var(--color-text);
+  border: 2px solid var(--color-border);
+}
+
+.btn-light:hover {
+  background: var(--color-panel-alt);
+}
+
+/* Perigo */
+.btn-danger {
+  background: var(--color-error);
+  color: var(--color-white);
+  border: 2px solid var(--color-error);
+}
+
+.btn-danger:hover {
+  background: #8a0000;
+}
+
+/* Apenas ícone (redondo) */
+.btn-icon {
+  padding: .6rem;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.btn-icon:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Tamanhos extras */
+.btn-sm { padding: .5rem 1rem; font-size: .9rem; }
+.btn-lg { padding: 1rem 1.8rem; font-size: 1.1rem; }
+
+/* =========================================
+   🔳 GRIDS
+   ========================================= */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+/* =========================================
+   🧩 INPUTS
+   ========================================= */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: .7rem .9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 1rem;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(225, 123, 106, .25);
+}
+
+/* =========================================
+   🧪 UTILITÁRIOS
+   ========================================= */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+
+.hidden { display: none !important; }
+
+/* =========================================
+   🎉 SNACKBAR (Material)
+   ========================================= */
+.mat-mdc-snack-bar-container {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.mat-mdc-snack-bar-action { color: #fff; }

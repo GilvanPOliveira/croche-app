@@ -62,33 +62,33 @@ export class PecaDetalhe implements OnInit, OnDestroy {
     this.sub?.unsubscribe();
   }
 
-private carregarPeca(id: number) {
-  const encontrada = this.pecasLista.find(p => p.id === id);
+  private carregarPeca(id: number) {
+    const encontrada = this.pecasLista.find(p => p.id === id);
 
-  if (!encontrada) {
-    this.erro = true;
+    if (!encontrada) {
+      this.erro = true;
+      this.carregando = false;
+      return;
+    }
+
+    this.peca = encontrada;
+    this.imagemAtual = encontrada.imagem;
+
+    this.indiceAtual = this.pecasLista.findIndex(p => p.id === id);
+
+    const tamanhoEnviado = history.state?.tamanhoSelecionado;
+
+    if (tamanhoEnviado && this.peca.tamanhos[tamanhoEnviado]) {
+      this.tamanhoSelecionado = tamanhoEnviado;
+    } else {
+      this.carregarPrimeiroTamanho();
+    }
+
+    this.setSEO(encontrada);
+    this.preloadVizinhas();
+
     this.carregando = false;
-    return;
   }
-
-  this.peca = encontrada;
-  this.imagemAtual = encontrada.imagem;
-
-  this.indiceAtual = this.pecasLista.findIndex(p => p.id === id);
-
-  const tamanhoEnviado = history.state?.tamanhoSelecionado;
-
-  if (tamanhoEnviado && this.peca.tamanhos[tamanhoEnviado]) {
-    this.tamanhoSelecionado = tamanhoEnviado;
-  } else {
-    this.carregarPrimeiroTamanho();
-  }
-
-  this.setSEO(encontrada);
-  this.preloadVizinhas();
-
-  this.carregando = false;
-}
 
 
   private carregarPrimeiroTamanho() {
@@ -128,13 +128,11 @@ private carregarPeca(id: number) {
   private navegarPara(peca: Peca) {
     const [folder, file] = peca.arquivo.replace('.json', '').split('/');
 
-    this.router.navigate([
-      '/pecas',
-      folder,
-      file,
-      peca.slug,
-      peca.id
-    ]);
+    this.router.navigate(['/pecas', folder, file, peca.slug, peca.id], {
+      state: {
+        voltarPara: history.state?.voltarPara || null
+      }
+    });
   }
 
   private preloadVizinhas() {
@@ -173,8 +171,12 @@ private carregarPeca(id: number) {
 
     this.router.navigate(['/encomendas'], {
       state: {
-        voltarParaPeca: this.router.url,
-        tamanhoSelecionado: this.tamanhoSelecionado
+        voltarPara: {
+          from: this.router.url,
+          query: {
+            tamanho: this.tamanhoSelecionado
+          }
+        }
       }
     });
   }
@@ -186,9 +188,13 @@ private carregarPeca(id: number) {
     const [folder, file] = p.arquivo.replace('.json', '').split('/');
 
     this.router.navigate(['/customizacao', folder, file, p.slug, p.id], {
-      state: { peca: p }
+      state: {
+        peca: p,
+        from: this.router.url
+      }
     });
   }
+
 
   onImageError(ev: Event) {
     const img = ev.target as HTMLImageElement;

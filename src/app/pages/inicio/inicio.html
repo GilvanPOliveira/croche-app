@@ -1,10 +1,10 @@
-<section class="inicio" aria-labelledby="titulo-inicio">
-  <div class="container intro">
-    <h1 id="titulo-inicio">Bem-vindo(a) ao Crochê Vane Alves</h1>
+<section class="section inicio">
+  <div class="container text-center">
+
+    <h1>Bem-vindo(a) ao Crochê Vane Alves</h1>
     <p>Peças artesanais feitas com amor, talento e criatividade.</p>
 
-    <div class="inicio-buttons card">
-      
+    <div class="inicio-buttons">
       <a routerLink="/pecas" class="btn">
         <i class="fa-solid fa-border-all"></i> Ver Peças
       </a>
@@ -12,19 +12,22 @@
       <a routerLink="/encomendas" class="btn-outline">
         <i class="fa-solid fa-bag-shopping"></i> Fazer Encomenda
       </a>
+
       <a routerLink="/aulas" class="btn">
         <i class="fa-solid fa-chalkboard-user"></i> Aulas & Tutoriais
       </a>
     </div>
   </div>
-</section> 
+</section>
 
-<section class="galeria" aria-labelledby="titulo-galeria">
-  <div class="container">
-    <h2 id="titulo-galeria">Categorias de Criações</h2>
+<section class="section galeria">
+  <div class="container text-center">
+    
+    <h2>Categorias de Criações</h2>
 
-    <div class="carousel" role="region" aria-label="Carrossel de categorias">
+    <div class="carousel">
       <div class="carousel-track">
+
         <ng-container *ngFor="let i of [1,2]">
           <div
             class="slide"
@@ -32,20 +35,22 @@
             (click)="abrirCategoria(cat.nome)"
             tabindex="0"
             role="button"
-            aria-label="Ver categoria {{ cat.nome }}"
           >
             <img
               [src]="cat.imagem"
-              [alt]="'Categoria: ' + cat.nome"
               loading="lazy"
               decoding="async"
+              [alt]="'Categoria: ' + cat.nome"
             />
+
             <div class="overlay">
               <span class="categoria">{{ cat.nome }}</span>
             </div>
           </div>
         </ng-container>
+
       </div>
     </div>
+
   </div>
 </section>

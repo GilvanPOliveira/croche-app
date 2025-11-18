@@ -1,5 +1,6 @@
 <section class="pecas">
-  <div class="container" *ngIf="pecasFiltradas.length > 0 && !erro">
+  <!-- LISTAGEM NORMAL -->
+  <div class="container" *ngIf="!erro && !carregando && pecasFiltradas.length > 0">
 
     <header class="topo-pecas">
       <div class="titulo">
@@ -26,11 +27,12 @@
           *ngIf="categoriaSelecionada || tipoSelecionado"
           (click)="limparFiltro()"
         >
-          Ver todas
+          Limpar filtros
         </button>
       </div>
     </header>
 
+    <!-- FILTROS PRINCIPAIS -->
     <nav class="filtros">
       <button
         class="chip"
@@ -50,6 +52,7 @@
       </button>
     </nav>
 
+    <!-- SUBFILTRO POR TIPO -->
     <nav *ngIf="tiposDisponiveis.length > 0" class="subfiltros">
       <button
         class="chip"
@@ -61,6 +64,7 @@
       </button>
     </nav>
 
+    <!-- GRID DE PEÇAS -->
     <div class="grid-pecas">
       <article
         *ngFor="let peca of pecasFiltradas"
@@ -75,23 +79,37 @@
           <img
             [src]="peca.imagem"
             [alt]="peca.nome"
-            loading="eager"
+            loading="lazy"
             decoding="async"
             (error)="peca.imagem = '/assets/image/imagem-404.png'"
           />
-
           <span class="badge">{{ peca.nome }}</span>
         </div>
       </article>
     </div>
   </div>
 
-  <div class="loading" *ngIf="carregando && !erro">
-    <div class="skeleton card" *ngFor="let i of [].constructor(6)"></div>
+  <!-- NENHUMA PEÇA ENCONTRADA (filtro muito restrito) -->
+  <div class="container vazio" *ngIf="!erro && !carregando && pecas.length > 0 && pecasFiltradas.length === 0">
+    <h2>Nenhuma peça encontrada</h2>
+    <p>
+      Tente remover alguns filtros ou escolher outra categoria/tipo.
+    </p>
+    <button class="btn-outline" (click)="limparFiltro()">
+      Ver todas as peças
+    </button>
   </div>
 
-  <div class="erro" *ngIf="erro">
+  <!-- LOADING -->
+  <div class="container loading" *ngIf="carregando && !erro">
+    <div class="loading-grid">
+      <div class="skeleton card" *ngFor="let i of [].constructor(6)"></div>
+    </div>
+  </div>
+
+  <!-- ERRO -->
+  <div class="container erro" *ngIf="erro">
     <p>Não foi possível carregar as peças no momento.</p>
-    <a routerLink="/" class="btn-voltar">Voltar ao início</a>
+    <a routerLink="/" class="btn-outline btn-voltar">Voltar ao início</a>
   </div>
 </section>

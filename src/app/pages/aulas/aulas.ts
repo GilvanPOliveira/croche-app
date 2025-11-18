@@ -32,12 +32,11 @@ export class Aulas {
 
     this.notificacao.notificar(`Aula "${aula.titulo}" adicionada às encomendas!`);
 
+    // Navega para encomendas guardando de onde veio (aulas)
     this.router.navigate(['/encomendas'], {
-      state: { from: this.router.url }
-    });
-
-    this.router.navigate(['/encomendas'], {
-      queryParams: { from: 'aulas' }
+      state: {
+        from: this.router.url,
+      },
     });
   }
 }
