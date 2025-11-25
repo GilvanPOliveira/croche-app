@@ -39,8 +39,11 @@ export class Pecas implements OnInit {
   ngOnInit(): void {
     this.pecasService.getTodasAsPecas().subscribe({
       next: (pecas) => {
-        this.pecas = pecas;
-        this.pecasFiltradas = [...pecas];
+        this.pecas = pecas.filter(
+          (p) => !(p.tipo === 'customizado' && p.slug === 'crie-sua-propria-peca')
+        );
+
+        this.pecasFiltradas = [...this.pecas];
 
         this.montarCategorias();
         this.aplicarFiltroInicial();
@@ -151,16 +154,13 @@ export class Pecas implements OnInit {
   verDetalhes(peca: Peca): void {
     const [folder, file] = peca.arquivo.replace('.json', '').split('/');
 
-    this.router.navigate(
-      ['/pecas', folder, file, peca.slug, peca.id],
-      {
-        state: {
-          voltarParaPecas: {
-            categoria: this.categoriaSelecionada,
-            tipo: this.tipoSelecionado,
-          }
-        }
-      }
-    );
+    this.router.navigate(['/pecas', folder, file, peca.slug, peca.id], {
+      state: {
+        voltarParaPecas: {
+          categoria: this.categoriaSelecionada,
+          tipo: this.tipoSelecionado,
+        },
+      },
+    });
   }
 }

@@ -25,7 +25,7 @@ export class Encomendas implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.sub = this.encomendasService.carrinho$.subscribe(itens => {
+    this.sub = this.encomendasService.carrinho$.subscribe((itens) => {
       this.itens = itens;
     });
   }
@@ -34,16 +34,17 @@ export class Encomendas implements OnInit, OnDestroy {
     this.sub?.unsubscribe();
   }
 
-  aumentar(id: string | number): void {
-    this.encomendasService.aumentar(id);
+  // 🔹 Agora trabalha com índice do array, não mais com id
+  aumentar(index: number): void {
+    this.encomendasService.aumentarIndex(index);
   }
 
-  diminuir(id: string | number): void {
-    this.encomendasService.diminuir(id);
+  diminuir(index: number): void {
+    this.encomendasService.diminuirIndex(index);
   }
 
-  remover(id: string | number): void {
-    this.encomendasService.remover(id);
+  remover(index: number): void {
+    this.encomendasService.removerIndex(index);
     this.notificacao.notificar('Item removido!');
   }
 
@@ -63,12 +64,23 @@ export class Encomendas implements OnInit, OnDestroy {
     (event.target as HTMLImageElement).src = 'assets/image/imagem-404.png';
   }
 
+  // 🔹 Resolve imagens antigas e novas (aulas, peças, etc.)
+  resolverImagem(imagem: string | null | undefined): string {
+    if (!imagem) return 'assets/image/imagem-404.png';
+    if (imagem.startsWith('http')) return imagem;
+    if (imagem.startsWith('/assets/') || imagem.startsWith('assets/')) return imagem;
+    return 'assets/image/pecas/' + imagem;
+  }
+
   get total(): string {
     return this.encomendasService.getTotalPreco();
   }
 
   temCoresSelecionadas(customizacao: any): boolean {
-    return !!(customizacao?.coresSelecionadas && Object.keys(customizacao.coresSelecionadas).length > 0);
+    return !!(
+      customizacao?.coresSelecionadas &&
+      Object.keys(customizacao.coresSelecionadas).length > 0
+    );
   }
 
   temMedidas(customizacao: any): boolean {
@@ -76,7 +88,9 @@ export class Encomendas implements OnInit, OnDestroy {
   }
 
   temObservacoes(customizacao: any): boolean {
-    return !!(customizacao?.observacoes && customizacao.observacoes.trim() !== '');
+    return !!(
+      customizacao?.observacoes && customizacao.observacoes.trim() !== ''
+    );
   }
 
   asKeyValue(obj: any): { key: string; value: any }[] {
@@ -90,8 +104,8 @@ export class Encomendas implements OnInit, OnDestroy {
     if (state?.voltarParaPeca) {
       this.router.navigateByUrl(state.voltarParaPeca, {
         state: {
-          tamanhoSelecionado: state?.tamanhoSelecionado
-        }
+          tamanhoSelecionado: state?.tamanhoSelecionado,
+        },
       });
       return;
     }
@@ -100,6 +114,8 @@ export class Encomendas implements OnInit, OnDestroy {
   }
 
   formatKey(key: string): string {
-    return key.replace(/_/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase());
+    return key
+      .replace(/_/g, ' ')
+      .replace(/\b\w/g, (l) => l.toUpperCase());
   }
 }

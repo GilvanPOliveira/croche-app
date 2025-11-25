@@ -1,11 +1,5 @@
-/* ----------------------------------------------------------
-   VANE ALVES CROCHÊ — DESIGN SYSTEM (Craft Elegante)
-   Base global, tipografia, botões, containers, cards, grids
-   ---------------------------------------------------------- */
+/* VARIÁVEIS GLOBAIS */
 
-/* =========================================
-   🎨 VARIÁVEIS GLOBAIS
-   ========================================= */
 :root {
   /* Paleta primária */
   --color-primary: #E17B6A;
@@ -39,7 +33,7 @@
   --color-whatsapp: #25D366;
   --color-youtube: #ff4444;
 
-  /* Radius (MÉDIO) — Craft Elegante */
+  /* Radius */
   --radius-lg: 14px;
   --radius-md: 10px;
   --radius-sm: 6px;
@@ -60,9 +54,8 @@
   --space-xl: 3rem;
 }
 
-/* =========================================
-   🔄 RESET GLOBAL
-   ========================================= */
+/* RESET GLOBAL */
+
 * {
   margin: 0;
   padding: 0;
@@ -77,9 +70,8 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* =========================================
-   📝 TIPOGRAFIA
-   ========================================= */
+/* TIPOGRAFIA */
+
 h1, h2, h3, h4 {
   font-family: var(--font-script);
   color: var(--color-primary);
@@ -97,9 +89,8 @@ p, span, li, a {
   color: var(--color-text);
 }
 
-/* =========================================
-   📦 CONTAINERS E SEÇÕES
-   ========================================= */
+/* CONTAINERS E SEÇÕES */
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -114,9 +105,8 @@ p, span, li, a {
   margin: var(--space-lg) auto;
 }
 
-/* =========================================
-   🧱 CARDS PADRÃO
-   ========================================= */
+/* CARDS PADRÃO */
+
 .card {
   background: var(--color-panel-soft);
   border-radius: var(--radius-md);
@@ -130,18 +120,15 @@ p, span, li, a {
   box-shadow: var(--shadow-hover);
 }
 
-/* =========================================
-   🧵 IMAGENS
-   ========================================= */
+/* IMAGENS */
+
 img {
   max-width: 100%;
   display: block;
   border-radius: var(--radius-md);
 }
 
-/* =========================================
-   🔘 BOTÕES PADRÃO (Craft Elegante)
-   ========================================= */
+/* BOTÕES PADRÃO */
 
 .btn,
 .btn-outline,
@@ -207,7 +194,7 @@ img {
   background: #8a0000;
 }
 
-/* Apenas ícone (redondo) */
+/* Apenas ícone */
 .btn-icon {
   padding: .6rem;
   border-radius: 50%;
@@ -225,9 +212,8 @@ img {
 .btn-sm { padding: .5rem 1rem; font-size: .9rem; }
 .btn-lg { padding: 1rem 1.8rem; font-size: 1.1rem; }
 
-/* =========================================
-   🔳 GRIDS
-   ========================================= */
+/* GRIDS */
+
 .grid {
   display: grid;
   gap: var(--space-md);
@@ -237,9 +223,8 @@ img {
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 
-/* =========================================
-   🧩 INPUTS
-   ========================================= */
+/* INPUTS */
+
 input,
 textarea,
 select {
@@ -259,9 +244,8 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(225, 123, 106, .25);
 }
 
-/* =========================================
-   🧪 UTILITÁRIOS
-   ========================================= */
+/* UTILITÁRIOS */
+
 .text-center { text-align: center; }
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
@@ -270,9 +254,8 @@ select:focus {
 
 .hidden { display: none !important; }
 
-/* =========================================
-   🎉 SNACKBAR (Material)
-   ========================================= */
+/* SNACKBAR (Material) */
+
 .mat-mdc-snack-bar-container {
   background: var(--color-primary);
   color: #fff;

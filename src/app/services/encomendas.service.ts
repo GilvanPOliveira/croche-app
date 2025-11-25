@@ -34,6 +34,15 @@ export class EncomendasService {
       : Date.now().toString();
   }
 
+  private normalizarImagem(imagem?: string | null): string {
+    if (!imagem) return 'assets/image/imagem-404.png';
+
+    if (imagem.startsWith('http')) return imagem;
+    if (imagem.startsWith('/assets/') || imagem.startsWith('assets/')) return imagem;
+
+    return 'assets/image/pecas/' + imagem;
+  }
+
   adicionar(item: {
     id: string | number;
     nome: string;
@@ -67,10 +76,9 @@ export class EncomendasService {
     const novoItem: ItemCarrinho = {
       id: item.customizacao ? this.gerarId(item.id) : item.id,
       nome: item.nome,
-      imagem: item.imagem || 'assets/image/imagem-404.png',
+      imagem: this.normalizarImagem(item.imagem),
       preco: item.preco || '0,00',
       tipo: item.tipo ?? null,
-
       quantidade: 1,
       medidas: item.medidas ?? null,
       customizacao: item.customizacao ?? null,
@@ -82,11 +90,6 @@ export class EncomendasService {
 
   remover(id: string | number) {
     this.itens = this.itens.filter((p) => String(p.id) !== String(id));
-    this.atualizarEstado();
-  }
-
-  limpar() {
-    this.itens = [];
     this.atualizarEstado();
   }
 
@@ -105,6 +108,36 @@ export class EncomendasService {
       else this.remover(id);
       this.atualizarEstado();
     }
+  }
+
+  removerIndex(index: number) {
+    if (index < 0 || index >= this.itens.length) return;
+    this.itens.splice(index, 1);
+    this.atualizarEstado();
+  }
+
+  aumentarIndex(index: number) {
+    if (index < 0 || index >= this.itens.length) return;
+    this.itens[index].quantidade++;
+    this.atualizarEstado();
+  }
+
+  diminuirIndex(index: number) {
+    if (index < 0 || index >= this.itens.length) return;
+    const item = this.itens[index];
+    if (!item) return;
+
+    if (item.quantidade > 1) {
+      item.quantidade--;
+    } else {
+      this.itens.splice(index, 1);
+    }
+    this.atualizarEstado();
+  }
+
+  limpar() {
+    this.itens = [];
+    this.atualizarEstado();
   }
 
   getItens() {
@@ -127,7 +160,7 @@ export class EncomendasService {
         existente.medidas = dados.medidas ?? existente.medidas;
         existente.nome = dados.nome ?? existente.nome;
         existente.preco = dados.preco ?? existente.preco;
-        existente.imagem = dados.imagem ?? existente.imagem;
+        existente.imagem = this.normalizarImagem(dados.imagem ?? existente.imagem);
         existente.tipo = dados.tipo ?? existente.tipo;
 
         this.atualizarEstado();
@@ -137,13 +170,15 @@ export class EncomendasService {
 
     const idFixo =
       dados.tipo && dados.nome
-        ? `${dados.tipo.toLowerCase()}-${dados.nome.toLowerCase().replace(/\s+/g, '-')}`
+        ? `${dados.tipo.toLowerCase()}-${dados.nome
+            .toLowerCase()
+            .replace(/\s+/g, '-')}`
         : undefined;
 
     const novoItem: ItemCarrinho = {
       id: this.gerarId(idFixo),
       nome: dados.nome || 'Item Personalizado',
-      imagem: dados.imagem || 'assets/image/imagem-404.png',
+      imagem: this.normalizarImagem(dados.imagem),
       preco: dados.preco || '0,00',
       tipo: dados.tipo ?? 'customizado',
       quantidade: 1,

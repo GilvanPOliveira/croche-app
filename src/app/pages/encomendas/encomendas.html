@@ -1,12 +1,10 @@
 <section class="encomendas">
   <div class="container">
-
     <h1>
       <i class="fa-solid fa-bag-shopping"></i>
       Minhas Encomendas
     </h1>
 
-    <!-- ESTADO VAZIO -->
     <div *ngIf="itens.length === 0" class="vazio">
       <p>Nenhuma peça adicionada ainda.</p>
 
@@ -14,56 +12,60 @@
         <a routerLink="/pecas" class="btn">
           <i class="fa-solid fa-border-all"></i> Ver Peças
         </a>
-        <a routerLink="/customizar" class="btn-outline">
+
+        <!-- 🔹 Leva para a peça especial "Crie sua própria peça" -->
+        <a
+          [routerLink]="[
+            '/pecas',
+            'customizados',
+            'criacao',
+            'crie-sua-propria-peca',
+            1
+          ]"
+          class="btn-outline"
+        >
           <i class="fa-solid fa-pen-ruler"></i> Criar Customização
         </a>
+
         <a routerLink="/aulas" class="btn">
           <i class="fa-solid fa-chalkboard-user"></i> Ver Aulas
         </a>
       </div>
     </div>
 
-    <!-- LISTA DE ENCOMENDAS -->
     <div *ngIf="itens.length > 0" class="lista-encomendas">
       <ul>
-        <li *ngFor="let item of itens" class="item-encomenda">
-
-          <!-- CARD DO ITEM -->
+        <!-- 🔹 Agora usa o índice "i" para controlar quantidade e remoção -->
+        <li *ngFor="let item of itens; let i = index" class="item-encomenda">
           <div class="topo-item">
             <img
-              [src]="item.imagem.startsWith('/assets/') ? item.imagem : 'assets/image/pecas/' + item.imagem"
+              [src]="resolverImagem(item.imagem)"
               [alt]="item.nome"
               class="thumb"
               (error)="ocultarImagem($event)"
             />
-
             <div class="detalhes">
               <h3>{{ item.nome }}</h3>
-
               <p class="preco">
                 <i class="fa-solid fa-tag"></i> {{ item.preco }}
               </p>
-
               <p class="quantidade">
                 <i class="fa-solid fa-hashtag"></i>
                 Quantidade: {{ item.quantidade }}
               </p>
-
               <div class="acoes-item">
                 <div class="botoes-qtd">
-                  <button class="btn-qtd" (click)="aumentar(item.id)">
+                  <button class="btn-qtd" (click)="aumentar(i)">
                     <i class="fa-solid fa-plus"></i>
                   </button>
-                  <button class="btn-qtd" (click)="diminuir(item.id)">
+                  <button class="btn-qtd" (click)="diminuir(i)">
                     <i class="fa-solid fa-minus"></i>
                   </button>
                 </div>
-
-                <button class="btn-remover" (click)="remover(item.id)">
+                <button class="btn-remover" (click)="remover(i)">
                   <i class="fa-solid fa-trash"></i> Remover
                 </button>
               </div>
-
               <button
                 class="btn-outline btn-custom"
                 (click)="abrirCustomizacao(item)"
@@ -81,7 +83,10 @@
             </h4>
 
             <!-- Cores -->
-            <div *ngIf="temCoresSelecionadas(item.customizacao)" class="linhas-resumo">
+            <div
+              *ngIf="temCoresSelecionadas(item.customizacao)"
+              class="linhas-resumo"
+            >
               <h5><i class="fa-solid fa-palette"></i> Linhas</h5>
 
               <div
@@ -97,7 +102,7 @@
                     [title]="cor.nome"
                   >
                     <img
-                      [src]="cor.imagem"
+                      [src]="resolverImagem(cor.imagem)"
                       [alt]="cor.nome"
                       (error)="ocultarImagem($event)"
                     />
@@ -111,9 +116,12 @@
               <h5><i class="fa-solid fa-ruler"></i> Medidas</h5>
 
               <ul>
-                <ng-container *ngFor="let campo of asKeyValue(item.customizacao.medidas)">
+                <ng-container
+                  *ngFor="let campo of asKeyValue(item.customizacao.medidas)"
+                >
                   <li *ngIf="campo.value">
-                    <strong>{{ formatKey(campo.key) }}:</strong> {{ campo.value }} cm
+                    <strong>{{ formatKey(campo.key) }}:</strong>
+                    {{ campo.value }} cm
                   </li>
                 </ng-container>
               </ul>
@@ -145,7 +153,6 @@
           </button>
         </div>
       </div>
-
     </div>
   </div>
 </section>

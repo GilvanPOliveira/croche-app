@@ -1,5 +1,4 @@
 <section class="pecas">
-  <!-- LISTAGEM NORMAL -->
   <div class="container" *ngIf="!erro && !carregando && pecasFiltradas.length > 0">
 
     <header class="topo-pecas">
@@ -32,7 +31,6 @@
       </div>
     </header>
 
-    <!-- FILTROS PRINCIPAIS -->
     <nav class="filtros">
       <button
         class="chip"
@@ -52,7 +50,6 @@
       </button>
     </nav>
 
-    <!-- SUBFILTRO POR TIPO -->
     <nav *ngIf="tiposDisponiveis.length > 0" class="subfiltros">
       <button
         class="chip"
@@ -64,7 +61,6 @@
       </button>
     </nav>
 
-    <!-- GRID DE PEÇAS -->
     <div class="grid-pecas">
       <article
         *ngFor="let peca of pecasFiltradas"
@@ -89,7 +85,6 @@
     </div>
   </div>
 
-  <!-- NENHUMA PEÇA ENCONTRADA (filtro muito restrito) -->
   <div class="container vazio" *ngIf="!erro && !carregando && pecas.length > 0 && pecasFiltradas.length === 0">
     <h2>Nenhuma peça encontrada</h2>
     <p>
@@ -100,14 +95,12 @@
     </button>
   </div>
 
-  <!-- LOADING -->
   <div class="container loading" *ngIf="carregando && !erro">
     <div class="loading-grid">
       <div class="skeleton card" *ngFor="let i of [].constructor(6)"></div>
     </div>
   </div>
 
-  <!-- ERRO -->
   <div class="container erro" *ngIf="erro">
     <p>Não foi possível carregar as peças no momento.</p>
     <a routerLink="/" class="btn-outline btn-voltar">Voltar ao início</a>

@@ -19,14 +19,12 @@ export const routes: Routes = [
     title: 'Peça em Crochê | Vane Alves'
   },
   {
-    // nova rota para customização a partir de uma encomenda
     path: 'customizar',
     loadComponent: () =>
       import('./pages/customizacao/customizacao').then((m) => m.Customizacao),
     title: 'Customização | Vane Alves'
   },
   {
-    // rota para customização a partir de uma peça específica (detalhe)
     path: 'customizacao/:folder/:file/:slug/:id',
     loadComponent: () =>
       import('./pages/customizacao/customizacao').then((m) => m.Customizacao),
